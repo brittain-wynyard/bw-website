@@ -6,36 +6,59 @@ title: Home
 <p>New Zealand distributor of the world&rsquo;s leading sports, outdoor,<br> 
     and lifestyle brands since 1923.</p>
 
-<h2>Brands</h2>
+<section id="brands">
 
-<div id="brands" class="row">
-    <div class="col-3">
-        <ul class="brands">
-        {% for brand in site.brands %}
-        <li style="background-image:url(/images{{ brand.url | replace: '.html', '-hover.svg' }})">
-            <img src="/images{{ brand.url | replace: 'html', 'svg' }}" alt="{{ brand.name }}">
-        </li>
-        {% endfor %}
-        </ul>
+    <h2>Brands</h2>
+    <div class="container">
+        <div class="row">
+            <div class="col-3">
+                <ul class="brands">
+                {% for brand in site.brands %}
+                <li style="background-image:url(/images{{ brand.url | replace: '.html', '-hover.svg' }})">
+                    <img src="/images{{ brand.url | replace: 'html', 'svg' }}" alt="{{ brand.name }}">
+                </li>
+                {% endfor %}
+                </ul>
+            </div>
+            <div class="col-1">
+                <div class="bw-v-divider"></div>
+            </div>
+            <div class="col-3">
+                logos 2
+                <p>&nbsp;</p>
+                <p>&nbsp;</p>
+                <p>&nbsp;</p>
+                <p>&nbsp;</p>
+            </div>
+            <div class="col-1">
+                <div class="bw-v-divider"></div>
+            </div>
+            <div class="col-3">
+                logos 3
+                <p>&nbsp;</p>
+                <p>&nbsp;</p>
+                <p>&nbsp;</p>
+                <p>&nbsp;</p>
+            </div>
+        </div>
     </div>
-    <div class="col-1">
-        <div class="bw-v-divider"></div>
+
+</section>
+
+<section id="channels" class="bg-gray">
+    <h2>Channels</h2>
+    <div class="container">
+    
+
+    
     </div>
-    <div class="col-3">
-        logos 2
-        <p>&nbsp;</p>
-        <p>&nbsp;</p>
-        <p>&nbsp;</p>
-        <p>&nbsp;</p>
+</section>
+
+<section id="expertise">
+    <h2>Expertise</h2>
+    <div class="container">
+    
+        
+    
     </div>
-    <div class="col-1">
-        <div class="bw-v-divider"></div>
-    </div>
-    <div class="col-3">
-        logos 3
-        <p>&nbsp;</p>
-        <p>&nbsp;</p>
-        <p>&nbsp;</p>
-        <p>&nbsp;</p>
-    </div>
-</div>
+</section>

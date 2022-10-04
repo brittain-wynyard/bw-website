@@ -1,4 +1,5 @@
 @import url("/css/bootstrap-grid.min.css");
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;700&display=swap');
 
 body {
     padding: 118px 0 0 0;
@@ -6,6 +7,13 @@ body {
     font-family: 'Poppins', sans-serif;
     font-weight: 300;
     font-size: 14px;
+}
+
+.bg-black {
+    background-color: #000;
+}
+.bg-gray {
+    background-color: #f1f1f1;
 }
 
 header > div {
@@ -93,11 +101,13 @@ main p:first-child {
 }
 
 .brands li {
+    display: inline-block;
     background-repeat: no-repeat;
     text-align: left;
 }
 
 .brands img {
+    display: inline-block;
     transition: opacity 250ms ease-in-out;
 }
 
@@ -108,9 +118,29 @@ main p:first-child {
 footer {
     display: block;
     background-color: #000;
+    color: #fff;
+}
+
+footer h4 {
+    display: inline-block;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-bottom: 2px solid #7f7f7f;
+    margin: 40px 0 10px 0;
+}
+
+footer p {
+    font-size: 13px;
+    line-height: 1.8;
+    color: #fff;
 }
 
 footer img {
     float: right;
 }
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;700&display=swap');
+
+.copyright {
+    text-align: center;
+    margin: 0;
+    padding: 0 0 30px 0;
+}

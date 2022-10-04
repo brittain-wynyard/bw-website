@@ -37,22 +37,33 @@
     </header>
 
     <main>
-      <div class="container">
+      
         {{ content }}
-      </div>
+      
     </main>
 
     <footer>
       <div class="container">
         <div class="row">
-          <div class="col-6">
-            links
+          <div class="col-3">
+            <h4>Address</h4>
+            <p>24 Heather Street<br>
+              Parnell<br>
+              Auckland 1052<br>
+              New Zealand</p>
+          </div>
+          <div class="col-3">
+            <h4>Contact Us</h4>
+            <p>+64 9 306 7200<br>
+            info@britwyn.co.nz</p>
           </div>
           <div class="col-6">
             <img src="/images/footer-logo.png" alt="BW - Est. 1923" class="float-right">
           </div>
         </div>
       </div>
+
+      <p class="copyright">Copyright &copy; {{ 'now' | date: '%Y' }} Brittan Wynyard. All rights reserved.</p>
     </footer>
 
 
