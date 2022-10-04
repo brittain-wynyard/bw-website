@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>{{ page.title }}</title>
+    <link rel="stylesheet" href="/css/styles.css" type="text/css" />
+    <link rel="icon" href="/images/favicon-32.png" sizes="32x32" />
+    <link rel="icon" href="/images/favicon-192.png" sizes="192x192" />
+    <link rel="apple-touch-icon" href="/images/favicon-180.png" />
+    <meta name="msapplication-TileImage" content="/images/favicon-270.png" />
+    <script>
+      document.addEventListener('scroll', function(e) {
+        var yPos = ( window.innerWidth > 700 ) ? ( 70 - window.scrollY + 'px') : '70px';
+        document.getElementById('bw-logo-scroll-mask').style.top = yPos;
+      });
+      window.addEventListener('resize', function() {
+        console.log(window.innerWidth)
+        if ( window.innerWidth < 700 ) {
+          var $scrollMask = document.getElementById('bw-logo-scroll-mask');
+          document.getElementById('bw-logo-scroll-mask').style.top = '70px';
+        }
+      });
+    </script>
+  </head>
+  <body>
+
+    <header>
+      <div>
+        <div id="bw-logo-scroll-mask" class="bw-logo-scroll-mask">
+          <span></span>
+          <span></span>
+        </div>
+        <img src="/images/header-logo-bottom-scroll.png" class="bw-logo-scroll" alt="{{ site.title }}">
+        <img src="/images/header-logo-top.png" alt="BW - Est. 1923">
+      </div>
+      <img src="/images/header-logo-bottom.jpg" alt="{{ site.title }}">
+    </header>
+
+    <main>
+      <div class="container">
+        {{ content }}
+      </div>
+    </main>
+
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-6">
+            links
+          </div>
+          <div class="col-6">
+            <img src="/images/footer-logo.png" alt="BW - Est. 1923" class="float-right">
+          </div>
+        </div>
+      </div>
+    </footer>
+
+
+  </body>
+</html>

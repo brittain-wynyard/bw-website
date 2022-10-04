@@ -1,0 +1,116 @@
+@import url("/css/bootstrap-grid.min.css");
+
+body {
+    padding: 118px 0 0 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    font-size: 14px;
+}
+
+header > div {
+    position: fixed;
+    background-color: #000;
+    display: block;
+    width: 100%;
+    top: 0;
+    text-align: center;
+    overflow: hidden;
+    z-index: 50;
+}
+
+header img {
+    display: block;
+    margin: 0 auto;
+}
+
+.bw-logo-scroll {
+    position: absolute;
+    top: 70px;
+    left: 50%;
+    margin-left: -220px;
+    z-index: 1;
+}
+
+.bw-logo-scroll-mask {
+    position: absolute;
+    display: flex;
+    width: 490px;
+    height: 40px;
+    left: 50%;
+    top: 70px;
+    margin-left: -225px;
+    z-index: 2;
+}
+
+.bw-logo-scroll-mask span {
+    width: 150px;
+    background-color: #000;
+    height: 40px;
+}
+
+.bw-logo-scroll-mask span:last-of-type {
+    margin-left: auto;
+}
+
+main {
+    min-height: 600px;
+    padding-top: 25px;
+    text-align: center;
+}
+
+h2 {
+    display: inline-block;
+    color: #439539;
+    font-weight: 700;
+    font-style: italic;
+    font-size: 36px;
+    height: 30px;
+    line-height: 1;
+    text-align: left;
+    text-transform: uppercase;
+    padding-left: 30px;
+    background: no-repeat url('/images/bw-title-slash.svg') left top;
+    background-size: contain;
+}
+
+main p:first-child {
+    text-align: center;
+    line-height: 1.6;
+}
+
+.bw-v-divider {
+    border: 1px solid #efefef;
+    width: 1px;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.brands {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.brands li {
+    background-repeat: no-repeat;
+    text-align: left;
+}
+
+.brands img {
+    transition: opacity 250ms ease-in-out;
+}
+
+.brands img:hover {
+    opacity: 0;
+}
+
+footer {
+    display: block;
+    background-color: #000;
+}
+
+footer img {
+    float: right;
+}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;700&display=swap');
