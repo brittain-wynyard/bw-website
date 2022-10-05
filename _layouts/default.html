@@ -2,12 +2,13 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>{{ page.title }}</title>
+    <title>{{ site.title }}</title>
     <link rel="stylesheet" href="/css/styles.css" type="text/css" />
     <link rel="icon" href="/images/favicon-32.png" sizes="32x32" />
     <link rel="icon" href="/images/favicon-192.png" sizes="192x192" />
     <link rel="apple-touch-icon" href="/images/favicon-180.png" />
     <meta name="msapplication-TileImage" content="/images/favicon-270.png" />
+    <meta name="description" content="{{ site.description }}">
     <script>
       document.addEventListener('scroll', function(e) {
         var yPos = ( window.innerWidth > 700 ) ? ( 70 - window.scrollY + 'px') : '70px';
@@ -45,24 +46,23 @@
     <footer>
       <div class="container">
         <div class="row">
-          <div class="col-3">
+          <div class="col-2">
             <h4>Address</h4>
             <p>24 Heather Street<br>
               Parnell<br>
               Auckland 1052<br>
               New Zealand</p>
           </div>
-          <div class="col-3">
+          <div class="col-2">
             <h4>Contact Us</h4>
             <p>+64 9 306 7200<br>
             info@britwyn.co.nz</p>
           </div>
-          <div class="col-6">
+          <div class="col-8">
             <img src="/images/footer-logo.png" alt="BW - Est. 1923" class="float-right">
           </div>
         </div>
       </div>
-
       <p class="copyright">Copyright &copy; {{ 'now' | date: '%Y' }} Brittan Wynyard. All rights reserved.</p>
     </footer>
 

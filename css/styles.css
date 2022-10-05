@@ -87,35 +87,77 @@ main p:first-child {
     line-height: 1.6;
 }
 
-.bw-v-divider {
-    border: 1px solid #efefef;
-    width: 1px;
-    height: 100%;
-    margin: 0 auto;
-}
-
-.brands {
+#brands ul {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
     padding: 0;
     margin: 0;
     list-style: none;
 }
 
-.brands li {
-    display: inline-block;
+#brands ul li {
     background-repeat: no-repeat;
-    text-align: left;
+    background-size: contain;
+    width: 50%;
 }
 
-.brands img {
-    display: inline-block;
+#brands ul li img {
+    display: block;
     transition: opacity 250ms ease-in-out;
+    max-width: 100%;
+    height: auto;
 }
 
-.brands img:hover {
+#brands ul li img:hover {
     opacity: 0;
 }
 
+/* Channels */
+
+#channels {
+    padding: 68px 0;
+}
+
+#channels h2 {
+    margin-top: 0;
+}
+
+#channels img {
+    display: block;
+    margin: 30px auto 0 auto;
+}
+
+h3 {
+    display: inline-block;
+    text-transform: uppercase;
+    border-bottom: 2px solid #000;
+    margin: 10px 0;
+}
+
+#channels p {
+    margin: 0;
+}
+
+/* Expertise */
+
+#expertise {
+    padding: 80px 0;
+}
+
+#channels h2 {
+    margin: 0;
+}
+
+#expertise img {
+    display: block;
+    margin: 40px auto 10px auto;
+}
+
+/* Footer */
+
 footer {
+    position: relative;
     display: block;
     background-color: #000;
     color: #fff;
@@ -140,7 +182,28 @@ footer img {
 }
 
 .copyright {
+    display: block;
+    position: absolute;
     text-align: center;
+    width: 100%;
     margin: 0;
-    padding: 0 0 30px 0;
+    padding: 0;
+    left: 0;
+    bottom: 10px;
+    z-index: 10;
+}
+
+/* Mobile */
+
+@media screen and (max-width: 576px) {
+    #brands ul li {
+        width: 33%;
+    }
+    #brands ul li.\/brands\/timberland{
+        order: 3 !important;
+    }
+    #brands ul li.\/brands\/clif-bar{
+        order: 4 !important;
+    }
+    
 }
