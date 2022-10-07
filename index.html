@@ -22,7 +22,7 @@ title: Home
                     {% for brand in site.brands %}
                         {% if brand.column == column %}
                             <li class="{{ brand.url | replace: '.html', '' }}" style="order:{{ brand.order }};background-image:url(/images{{ brand.url | replace: '.html', '-hover.svg' }})">
-                                <img src="/images{{ brand.url | replace: 'html', 'svg' }}" alt="{{ brand.name }}">
+                                <img src="{{ site.baseurl }}/images{{ brand.url | replace: 'html', 'svg' }}" alt="{{ brand.name }}">
                             </li>
                         {% endif %}
                     {% endfor %}
@@ -41,22 +41,22 @@ title: Home
     <div class="container">
         <div class="row">
             <div class="col">
-                <img src="/images/icon-wholesale.svg" alt="Wholesale">
+                <img src="{{ site.baseurl }}/images/icon-wholesale.svg" alt="Wholesale">
                 <h3>Wholesale</h3>
                 <p>700 Doors</p>
             </div>
             <div class="col">
-                <img src="/images/icon-flagships.svg" alt="Flagships">
+                <img src="{{ site.baseurl }}/images/icon-flagships.svg" alt="Flagships">
                 <h3>Flagships</h3>
                 <p>10 Stores</p>
             </div>
             <div class="col">
-                <img src="/images/icon-ecommerce.svg" alt="Ecommerce">
+                <img src="{{ site.baseurl }}/images/icon-ecommerce.svg" alt="Ecommerce">
                 <h3>Ecommerce</h3>
                 <p>6 Sites</p>
             </div>
             <div class="col">
-                <img src="/images/icon-outlet.svg" alt="Outlet">
+                <img src="{{ site.baseurl }}/images/icon-outlet.svg" alt="Outlet">
                 <h3>Outlet</h3>
                 <p>5 Stores</p>
             </div>
@@ -71,27 +71,27 @@ title: Home
     <div class="container">
         <div class="row">
             <div class="col-4">
-                <img src="/images/icon-sales.svg" alt="Sales">
+                <img src="{{ site.baseurl }}/images/icon-sales.svg" alt="Sales">
                 <h3>Sales</h3>
             </div>
             <div class="col-4">
-                <img src="/images/icon-marketing.svg" alt="Marketing">
+                <img src="{{ site.baseurl }}/images/icon-marketing.svg" alt="Marketing">
                 <h3>Marketing</h3>
             </div>
             <div class="col-4">
-                <img src="/images/icon-logistics.svg" alt="Logistics">
+                <img src="{{ site.baseurl }}/images/icon-logistics.svg" alt="Logistics">
                 <h3>Logistics</h3>
             </div>
             <div class="col-4">
-                <img src="/images/icon-digital.svg" alt="Digital">
+                <img src="{{ site.baseurl }}/images/icon-digital.svg" alt="Digital">
                 <h3>Digital</h3>
             </div>
             <div class="col-4">
-                <img src="/images/icon-service.svg" alt="Service">
+                <img src="{{ site.baseurl }}/images/icon-service.svg" alt="Service">
                 <h3>Service</h3>
             </div>
             <div class="col-4">
-                <img src="/images/icon-repairs.svg" alt="Repairs">
+                <img src="{{ site.baseurl }}/images/icon-repairs.svg" alt="Repairs">
                 <h3>Repairs</h3>
             </div>
         </div>
