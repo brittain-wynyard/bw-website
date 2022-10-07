@@ -1,7 +1,8 @@
 title: Brittain Wynyard & Co Limited
 email: info@britwyn.co.nz
 description: New Zealand distributor of the world’s leading sports, outdoor, and lifestyle brands since 1923.
-url: "https://brittain-wynyard.github.io/bw-website"
+url: "https://brittain-wynyard.github.io"
+baseurl: "/bw-website"
 github_username:  brittain-wynyard
 collections:
   brands:
