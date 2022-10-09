@@ -17,7 +17,7 @@ title: Home
     <div class="container">
         <div class="row">
             {% for column in (1..3) %}
-            <div class="col-xs-12 col-sm-4 p-0">
+            <div class="position-relative col-sm-4">
                 <ul>
                     {% for brand in site.brands %}
                         {% if brand.column == column %}
@@ -27,6 +27,9 @@ title: Home
                         {% endif %}
                     {% endfor %}
                 </ul>
+                {% unless forloop.last %}
+                <div class="divider divider-{{ forloop.index }}"></div>
+                {% endunless %}
             </div>
             {% endfor %}
         </div>
@@ -40,22 +43,22 @@ title: Home
     
     <div class="container">
         <div class="row">
-            <div class="col">
+            <div class="col-6 col-sm-3">
                 <img src="{{ site.baseurl }}/images/icon-wholesale.svg" alt="Wholesale">
                 <h3>Wholesale</h3>
                 <p>700 Doors</p>
             </div>
-            <div class="col">
+            <div class="col-6 col-sm-3">
                 <img src="{{ site.baseurl }}/images/icon-flagships.svg" alt="Flagships">
                 <h3>Flagships</h3>
                 <p>10 Stores</p>
             </div>
-            <div class="col">
+            <div class="col-6 col-sm-3">
                 <img src="{{ site.baseurl }}/images/icon-ecommerce.svg" alt="Ecommerce">
                 <h3>Ecommerce</h3>
                 <p>6 Sites</p>
             </div>
-            <div class="col">
+            <div class="col-6 col-sm-3">
                 <img src="{{ site.baseurl }}/images/icon-outlet.svg" alt="Outlet">
                 <h3>Outlet</h3>
                 <p>5 Stores</p>
@@ -70,27 +73,27 @@ title: Home
     
     <div class="container">
         <div class="row">
-            <div class="col-4">
+            <div class="col-6 col-sm-4">
                 <img src="{{ site.baseurl }}/images/icon-sales.svg" alt="Sales">
                 <h3>Sales</h3>
             </div>
-            <div class="col-4">
+            <div class="col-6 col-sm-4">
                 <img src="{{ site.baseurl }}/images/icon-marketing.svg" alt="Marketing">
                 <h3>Marketing</h3>
             </div>
-            <div class="col-4">
+            <div class="col-6 col-sm-4">
                 <img src="{{ site.baseurl }}/images/icon-logistics.svg" alt="Logistics">
                 <h3>Logistics</h3>
             </div>
-            <div class="col-4">
+            <div class="col-6 col-sm-4">
                 <img src="{{ site.baseurl }}/images/icon-digital.svg" alt="Digital">
                 <h3>Digital</h3>
             </div>
-            <div class="col-4">
+            <div class="col-6 col-sm-4">
                 <img src="{{ site.baseurl }}/images/icon-service.svg" alt="Service">
                 <h3>Service</h3>
             </div>
-            <div class="col-4">
+            <div class="col-6 col-sm-4">
                 <img src="{{ site.baseurl }}/images/icon-repairs.svg" alt="Repairs">
                 <h3>Repairs</h3>
             </div>

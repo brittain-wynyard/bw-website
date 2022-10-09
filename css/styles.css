@@ -6,25 +6,32 @@ body {
     margin: 0;
     font-family: 'Poppins', sans-serif;
     font-weight: 300;
-    font-size: 14px;
+    font-size: 15px;
 }
 
 .bg-black {
     background-color: #000;
 }
+
 .bg-gray {
     background-color: #f1f1f1;
 }
 
+header {
+    overflow: hidden;
+}
+
 header > div {
     position: fixed;
-    background-color: #000;
     display: block;
     width: 100%;
+    height: 118px;
     top: 0;
     text-align: center;
     overflow: hidden;
     z-index: 50;
+    background: #000 no-repeat url('../images/header-logo-top.png') center top;
+    background-size: contain;
 }
 
 header img {
@@ -61,9 +68,36 @@ header img {
     margin-left: auto;
 }
 
+header nav {
+    display: block;
+    float: right;
+    height: 118px;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 45px 0 0 0;
+}
+
+header nav ul li {
+    display: inline-block;
+    margin-left: 50px;
+}
+
+header nav ul li img {
+    display: inline-block;
+    margin-right: 5px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+}
+
 main {
-    min-height: 600px;
-    padding-top: 25px;
+    padding-top: 18px;
     text-align: center;
 }
 
@@ -72,14 +106,13 @@ h2 {
     color: #439539;
     font-weight: 700;
     font-style: italic;
-    font-size: 36px;
-    height: 30px;
+    font-size: 40px;
     line-height: 1;
     text-align: left;
     text-transform: uppercase;
-    padding-left: 30px;
-    background: no-repeat url('/images/bw-title-slash.svg') left top;
-    background-size: contain;
+    padding-left: 40px;
+    background: no-repeat url('/images/bw-title-slash.svg') left 5px;
+    background-size: 30px 30px;
 }
 
 main p:first-child {
@@ -87,20 +120,36 @@ main p:first-child {
     line-height: 1.6;
 }
 
+/* // BRANDS */
+
+#brands {
+    padding-bottom: 60px;
+}
+
+.position-relative {
+    position: relative;
+}
+
+.position-absolute {
+    position: absolute;
+}
+
 #brands ul {
+    position: relative;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     padding: 0;
     margin: 0;
+    width: 100%;
     list-style: none;
     justify-content: center;
 }
 
 #brands ul li {
+    position: relative;
     background-repeat: no-repeat;
     background-size: contain;
-    width: 50%;
 }
 
 #brands ul li img {
@@ -114,19 +163,37 @@ main p:first-child {
     opacity: 0;
 }
 
-/* Channels */
+#brands .divider {
+    display: block;
+    position: absolute;
+    background-color: #dfdfdf;
+    width: 2px;
+    height: 100%;
+    z-index: 1;
+    top: 0;
+}
+
+#brands .divider-1 {
+    right: 0;
+}
+
+#brands .divider-2 {
+    right: 0;
+}
+
+/* // CHANNELS */
 
 #channels {
-    padding: 68px 0;
+    padding: 60px 0;
 }
 
 #channels h2 {
-    margin-top: 0;
+    margin: 0;
 }
 
 #channels img {
     display: block;
-    margin: 30px auto 0 auto;
+    margin: 50px auto 0 auto;
 }
 
 h3 {
@@ -134,13 +201,15 @@ h3 {
     text-transform: uppercase;
     border-bottom: 2px solid #000;
     margin: 10px 0;
+    font-size: 20px;
 }
 
 #channels p {
     margin: 0;
+    font-size: 18px;
 }
 
-/* Expertise */
+/* // EXPERTISE */
 
 #expertise {
     padding: 80px 0;
@@ -194,17 +263,62 @@ footer img {
     z-index: 10;
 }
 
+@media screen and (max-width: 992px) {
+    .copyright {
+        position: relative;
+    }
+}
+
 /* Mobile */
 
 @media screen and (max-width: 576px) {
-    #brands ul li {
-        width: 33%;
+    body {
+        padding: 78px 0 0 0;
     }
+    
+    header > div {
+        height: 76px;
+    }
+
+    header > img {
+        width: 132px;
+    }
+
+    header nav {
+        display: none;
+    }
+
+    .bw-logo-scroll,
+    .bw-logo-scroll-mask {
+        display: none;
+    }
+    
+    #brands ul li {
+        width: 30%;
+    }
+
     #brands ul li.\/brands\/timberland{
         order: 3 !important;
     }
+    
     #brands ul li.\/brands\/clif-bar{
         order: 4 !important;
+    }
+    
+    #brands .divider {
+        position: relative;
+        height: 2px;
+        width: 92%;
+        margin: 0 auto;        
+    }
+
+    .divider-1 {
+        display: block;
+    }
+
+    #channels img {
+        width: auto;
+        max-width: 100%;
     }
     
 }

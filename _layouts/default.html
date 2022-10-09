@@ -27,13 +27,33 @@
   <body>
 
     <header>
+
       <div>
-        <div id="bw-logo-scroll-mask" class="bw-logo-scroll-mask">
-          <span></span>
-          <span></span>
+        <div class="container">
+
+          <nav>
+            <ul>
+              <li>
+                <a href="https://app.next.nuorder.com/">
+                  <img src="{{ site.baseurl }}/images/nav-nuorder.svg" alt="NuORDER">
+                  NuORDER
+                </a>
+              </li>
+              <li>
+                <a href="https://portal.brittainwynyard.co.nz/session/login">
+                  <img src="{{ site.baseurl }}/images/nav-cs-portal.svg" alt="CS Portal">
+                  CS PORTAL
+                </a>
+              </li>
+            </ul>
+          </nav>
+
+          <div id="bw-logo-scroll-mask" class="bw-logo-scroll-mask">
+            <span></span>
+            <span></span>
+          </div>
+          <img src="{{ site.baseurl }}/images/header-logo-bottom-scroll.png" class="bw-logo-scroll" alt="{{ site.title }}">
         </div>
-        <img src="{{ site.baseurl }}/images/header-logo-bottom-scroll.png" class="bw-logo-scroll" alt="{{ site.title }}">
-        <img src="{{ site.baseurl }}/images/header-logo-top.png" alt="BW - Est. 1923">
       </div>
       <img src="{{ site.baseurl }}/images/header-logo-bottom.jpg" alt="{{ site.title }}">
     </header>
@@ -47,26 +67,27 @@
     <footer>
       <div class="container">
         <div class="row">
-          <div class="col-2">
+          <div class="col-md-3 col-lg-2">
             <h4>Address</h4>
             <p>24 Heather Street<br>
               Parnell<br>
               Auckland 1052<br>
               New Zealand</p>
           </div>
-          <div class="col-2">
+          <div class="col-md-3 col-lg-2">
             <h4>Contact Us</h4>
             <p>+64 9 306 7200<br>
             info@britwyn.co.nz</p>
           </div>
-          <div class="col-8">
-            <img src="{{ site.baseurl }}/images/footer-logo.png" alt="BW - Est. 1923" class="float-right">
+          <div class="d-none d-sm-block col-md-6 col-lg-8">
+            <img src="{{ site.baseurl }}/images/footer-logo.png" alt="BW - Est. 1923">
           </div>
         </div>
       </div>
-      <p class="copyright">Copyright &copy; {{ 'now' | date: '%Y' }} Brittan Wynyard. All rights reserved.</p>
-    </footer>
 
+      <p class="copyright">Copyright &copy; {{ 'now' | date: '%Y' }} Brittan Wynyard. All rights reserved.</p>
+    
+    </footer>
 
   </body>
 </html>
