@@ -18,23 +18,23 @@
       <div>
         <div class="container">
 
-          <nav>
-            <div id="nav-icon" class="d-xl-none">
+          <nav id="nav">
+            <div id="nav-icon">
               <span></span>
               <span></span>
               <span></span>
             </div>
 
-            <ul class="d-none d-xl-block">
+            <ul>
               <li>
                 <a href="https://app.next.nuorder.com/">
-                  <img src="{{ site.baseurl }}/images/nav-nuorder.svg" alt="NuORDER">
+                  <svg xmlns="http://www.w3.org/2000/svg" id="nav-nuorder" width="24.063" height="11.25" viewBox="0 0 24.063 11.25"><g transform="translate(203 -475.3)"><g transform="translate(-203 475.3)"><path d="M-188.979,485.376V475.3h-10.9l10.317,10.317A.341.341,0,0,0-188.979,485.376Z" transform="translate(200.854 -475.3)"/><path d="M-203,476.421v10.9h10.9Z" transform="translate(203 -476.071)"/></g><path d="M-153.312,475.3v2.344a.469.469,0,0,1-.469.469.469.469,0,0,1-.469-.469V475.3H-163v10a1.254,1.254,0,0,0,1.253,1.253h10.309V475.3Z" transform="translate(-27.5 0)"/></g></svg>              
                   NuORDER
                 </a>
               </li>
               <li>
                 <a href="https://portal.brittainwynyard.co.nz/session/login">
-                  <img src="{{ site.baseurl }}/images/nav-cs-portal.svg" alt="CS Portal">
+                  <svg xmlns="http://www.w3.org/2000/svg" id="nav-cs-portal" width="16.5" height="18.79" viewBox="0 0 16.5 18.79"><g transform="translate(107 -477.719)"><circle cx="4.258" cy="4.258" r="4.258" transform="translate(-102.742 477.719)"/><path d="M-94.4,493.242a5.447,5.447,0,0,1-4.088,1.845A5.452,5.452,0,0,1-102.773,493,10.274,10.274,0,0,0-107,501.594a11.611,11.611,0,0,0,.291,2.557h15.918a11.61,11.61,0,0,0,.291-2.557A10.368,10.368,0,0,0-94.4,493.242Z" transform="translate(0 -7.641)"/></g></svg>
                   CS PORTAL
                 </a>
               </li>
@@ -93,10 +93,12 @@
           var $scrollMask = document.getElementById('bw-logo-scroll-mask');
           document.getElementById('bw-logo-scroll-mask').style.top = '70px';
         }
+        document.getElementById('nav').classList.remove("open");
       });
       document.getElementById('nav-icon').addEventListener('click', function() {
-        this.classList.toggle("open");
+        document.getElementById('nav').classList.toggle("open");
       });
+
     </script>
 
   </body>
