@@ -10,19 +10,6 @@
     <meta name="msapplication-TileImage" content="{{ site.baseurl }}/images/favicon-270.png" />
     <meta name="description" content="{{ site.description }}">
     <meta name="robots" content="noindex"> <!-- Remove on go-live -->
-    <script>
-      document.addEventListener('scroll', function(e) {
-        var yPos = ( window.innerWidth > 700 ) ? ( 70 - window.scrollY + 'px') : '70px';
-        document.getElementById('bw-logo-scroll-mask').style.top = yPos;
-      });
-      window.addEventListener('resize', function() {
-        console.log(window.innerWidth)
-        if ( window.innerWidth < 700 ) {
-          var $scrollMask = document.getElementById('bw-logo-scroll-mask');
-          document.getElementById('bw-logo-scroll-mask').style.top = '70px';
-        }
-      });
-    </script>
   </head>
   <body>
 
@@ -32,7 +19,13 @@
         <div class="container">
 
           <nav>
-            <ul>
+            <div id="nav-icon" class="d-xl-none">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+
+            <ul class="d-none d-xl-block">
               <li>
                 <a href="https://app.next.nuorder.com/">
                   <img src="{{ site.baseurl }}/images/nav-nuorder.svg" alt="NuORDER">
@@ -88,6 +81,23 @@
       <p class="copyright">Copyright &copy; {{ 'now' | date: '%Y' }} Brittan Wynyard. All rights reserved.</p>
     
     </footer>
+
+    <script>
+      document.addEventListener('scroll', function(e) {
+        var yPos = ( window.innerWidth > 700 ) ? ( 70 - window.scrollY + 'px') : '70px';
+        document.getElementById('bw-logo-scroll-mask').style.top = yPos;
+      });
+      window.addEventListener('resize', function() {
+        console.log(window.innerWidth)
+        if ( window.innerWidth < 700 ) {
+          var $scrollMask = document.getElementById('bw-logo-scroll-mask');
+          document.getElementById('bw-logo-scroll-mask').style.top = '70px';
+        }
+      });
+      document.getElementById('nav-icon').addEventListener('click', function() {
+        this.classList.toggle("open");
+      });
+    </script>
 
   </body>
 </html>
