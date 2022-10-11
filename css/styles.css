@@ -214,6 +214,10 @@ main p:first-child {
     padding-bottom: 60px;
 }
 
+#brands h2 {
+    margin: 40px 0;
+}
+
 .position-relative {
     position: relative;
 }
