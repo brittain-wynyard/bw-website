@@ -27,7 +27,7 @@ title: Home
                 <ul>
                     {% for brand in site.brands %}
                         {% if brand.column == column %}
-                            <li class="{{ brand.url | replace: '.html', '' }}" style="order:{{ brand.order }};background-image:url(/images{{ brand.url | replace: '.html', '-hover.svg' }})">
+                            <li class="{{ brand.url | replace: '.html', '' }}" style="order:{{ brand.order }};background-image:url({{ site.baseurl }}/images{{ brand.url | replace: '.html', '-hover.svg' }})">
                                 <img src="{{ site.baseurl }}/images{{ brand.url | replace: 'html', 'svg' }}" alt="{{ brand.name }}">
                             </li>
                         {% endif %}
