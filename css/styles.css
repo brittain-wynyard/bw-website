@@ -115,7 +115,7 @@ h2 {
     text-align: left;
     text-transform: uppercase;
     padding-left: 40px;
-    background: no-repeat url('/images/bw-title-slash.svg') left 5px;
+    background: no-repeat url('../images/bw-title-slash.svg') left 5px;
     background-size: 30px 30px;
 }
 
