@@ -19,11 +19,13 @@
         <div class="container">
 
           <nav id="nav">
-            <div id="nav-icon">
+
+            <input type="checkbox" id="nav-icon-toggle">
+            <label id="nav-icon" for="nav-icon-toggle">
               <span></span>
               <span></span>
               <span></span>
-            </div>
+            </label>
 
             <ul>
               <li>
@@ -72,9 +74,6 @@
             <p>+64 9 306 7200<br>
             info@britwyn.co.nz</p>
           </div>
-          <div class="d-none d-sm-block col-md-6 col-lg-8">
-            <img src="{{ site.baseurl }}/images/footer-logo.png" alt="BW - Est. 1923">
-          </div>
         </div>
       </div>
 
@@ -88,17 +87,12 @@
         document.getElementById('bw-logo-scroll-mask').style.top = yPos;
       });
       window.addEventListener('resize', function() {
-        console.log(window.innerWidth)
         if ( window.innerWidth < 700 ) {
           var $scrollMask = document.getElementById('bw-logo-scroll-mask');
           document.getElementById('bw-logo-scroll-mask').style.top = '70px';
         }
         document.getElementById('nav').classList.remove("open");
       });
-      document.getElementById('nav-icon').addEventListener('click', function() {
-        document.getElementById('nav').classList.toggle("open");
-      });
-
     </script>
 
   </body>
