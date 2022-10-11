@@ -1,0 +1,6 @@
+<script>
+var q = new URLSearchParams(window.location.search); 
+if ( q.get('redirect_url') !== null ) {
+  window.top.location = q.get('redirect_url');
+}
+</script>
