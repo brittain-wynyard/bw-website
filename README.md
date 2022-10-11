@@ -1,4 +1,4 @@
 # bw-website
 BW Corporate Website
 
-https://brittain-wynyard.github.io/bw-website
+https://brittain-wynyard.github.io
