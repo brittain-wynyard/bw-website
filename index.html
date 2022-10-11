@@ -4,19 +4,23 @@ title: Home
 ---
 
 <section id="intro">
-
-    <p>New Zealand distributor of the world&rsquo;s leading<br class="d-inline d-sm-none"> sports, outdoor,<br class="d-none d-sm-inline"> 
-    and lifestyle brands since 1923.</p>
-
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <p>New Zealand distributor of the world&rsquo;s leading<br class="d-inline d-sm-none"> sports, outdoor,<br class="d-none d-sm-inline"> and lifestyle brands since 1923.</p>
+            </div>
+        </div>
+    </div>
 </section>
 
 <section id="brands">
 
-    <div class="row">
-        <div class="col text-center"><h2>Brands</h2></div>
-    </div>
-    
     <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="col text-center"><h2>Brands</h2></div>
+            </div>
+        </div>
         <div class="row">
             {% for column in (1..3) %}
             <div class="position-relative col-sm-4">
@@ -43,11 +47,10 @@ title: Home
 
 <section id="channels" class="bg-gray">
 
-    <div class="row">
-        <div class="col text-center"><h2>Channels</h2></div>
-    </div>
-    
     <div class="container">
+        <div class="row">
+            <div class="col text-center"><h2>Channels</h2></div>
+        </div>    
         <div class="row">
             <div class="col-6 col-md-3">
                 <img src="{{ site.baseurl }}/images/icon-wholesale.svg" alt="Wholesale">
@@ -75,13 +78,13 @@ title: Home
 
 <section id="expertise">
 
-    <div class="row">
-        <div class="col text-center">
-            <h2>Expertise</h2>
-        </div>
-    </div>
-    
     <div class="container">
+        <div class="row">
+            <div class="col text-center">
+                <h2>Expertise</h2>
+            </div>
+        </div>
+
         <div class="row">
             <div class="col-6 col-sm-4">
                 <img src="{{ site.baseurl }}/images/icon-sales.svg" alt="Sales">
