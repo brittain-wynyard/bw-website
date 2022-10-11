@@ -375,19 +375,17 @@ footer img {
 
 @media screen and (max-width: 1400px) {
     #nav ul {
-        position: absolute;
-        width: 380px;
+        position: fixed;
+        width: 390px;
         top: 118px;
         left: -430px;
         transition: left .3s ease-in-out;
         float: none;
         margin: 0;
-        z-index: 100;
-        
+        z-index: 1000;
         -webkit-box-shadow: 0px 4px 4px rgba(175,175,175,0.5);
         -moz-box-shadow: 0px 4px 4px rgba(175,175,175,0.5);
         box-shadow: 0px 4px 4px rgba(175,175,175,0.5);
-        -webkit-appearance: none;
     }
     #nav-icon-toggle:checked ~ ul {
         left: 0;
@@ -404,7 +402,7 @@ footer img {
         display: block;
         color: #000;
         padding: 25px 37px;
-        background: #fff no-repeat url('../images/header-nav-arrow.svg') 340px center;
+        background: #fff no-repeat url('../images/header-nav-arrow.svg') 350px center;
     }
     #nav svg path,
     #nav svg circle {
