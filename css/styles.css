@@ -252,9 +252,21 @@ main p:first-child {
     height: auto;
 }
 
-#brands ul li img:hover {
+#brands ul li img:first-child {
+    position: absolute;
     opacity: 0;
 }
+
+#brands ul li:hover img:first-child {
+    opacity: 1;
+}
+
+#brands ul li:hover img:last-child {
+    opacity: 0;
+}
+
+
+
 
 #brands .divider {
     display: block;
