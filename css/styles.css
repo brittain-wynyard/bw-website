@@ -383,6 +383,8 @@ footer img {
         float: none;
         margin: 0;
         z-index: 100;
+        -webkit-box-shadow: -4px 4px 4px rgba(175,175,175,0.5);
+        -moz-box-shadow: -4px 4px 4px rgba(175,175,175,0.5);
         box-shadow: -4px 4px 4px rgba(175,175,175,0.5);
     }
     #nav-icon-toggle:checked ~ ul {
