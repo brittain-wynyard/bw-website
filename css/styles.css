@@ -103,6 +103,7 @@ header img {
 main {
     padding-top: 18px;
     text-align: center;
+    min-height: 400px;
 }
 
 h2 {
