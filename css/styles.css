@@ -362,6 +362,11 @@ footer p {
     color: #fff;
 }
 
+footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
 footer img {
     float: right;
 }
