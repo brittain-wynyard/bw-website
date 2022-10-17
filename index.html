@@ -28,8 +28,10 @@ title: Home
                     {% for brand in site.brands %}
                         {% if brand.column == column %}
                             <li class="{{ brand.url | replace: '.html', '' }}" style="order:{{ brand.order }}">
-                                <img src="/images{{ brand.url | replace: '.html', '-hover.svg' }}" alt="{{ brand.name }}">
-                                <img src="/images{{ brand.url | replace: 'html', 'svg' }}" alt="{{ brand.name }}">
+                                <a href="{{ brand.website }}" target="_blank">
+                                    <img src="/images{{ brand.url | replace: '.html', '-hover.svg' }}" alt="{{ brand.name }}">
+                                    <img src="/images{{ brand.url | replace: 'html', 'svg' }}" alt="{{ brand.name }}">
+                                </a>
                             </li>
                         {% endif %}
                     {% endfor %}
