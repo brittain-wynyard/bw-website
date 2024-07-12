@@ -331,6 +331,16 @@ h3 {
     margin: 40px auto 10px auto;
 }
 
+/* // Sustainability */
+
+#sustainability {
+    padding: 80px 0;
+}
+
+#sustainability h2 {
+    margin: 0;
+}
+
 #sustainability img {
     display: block;
     margin: 50px auto 10px auto;
