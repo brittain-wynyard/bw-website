@@ -343,7 +343,8 @@ h3 {
 
 #sustainability img {
     display: block;
-    margin: 50px 75px 10px 75px;
+     width: 110px;
+    margin: 50px auto 10px auto;
 }
 
 /* Footer */
