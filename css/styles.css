@@ -341,6 +341,11 @@ h3 {
     margin: 0;
 }
 
+
+#sustainability row {
+        justify-content: center;
+}
+
 #sustainability img {
     display: block;
      width: 110px;
@@ -407,6 +412,9 @@ footer img {
 @media screen and (max-width: 992px) {
     .copyright {
         position: relative;
+    }
+    h3 {
+    font-size: 18px;
     }
 }
 
