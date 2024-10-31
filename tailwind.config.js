@@ -5,6 +5,8 @@ module.exports = {
     container: {
       center: true,
     },
+    
+
     extend: {
       colors: {
         'transparent': 'transparent',
@@ -13,10 +15,15 @@ module.exports = {
         'bw-green': '#004926',
         'bw-grey': '#CCCCCC'
       },
+      fontWeight: {
+        'normal': '400',
+        'medium': '600',
+        'bold': '700',
+        'black': '900'
+      },
       fontFamily: {
         'sans': ['Untitled', 'Helvetica', 'Arial', 'sans-serif']
-      }
-      
+      },
     },
   },
   plugins: [],
