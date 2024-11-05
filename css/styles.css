@@ -77,10 +77,16 @@
     --main-bw-color: #004926;
 }
 
+#our-brands,
+#our-expertise,
+#our-channels,
+#bw-sustainability {
+    padding-top: 90px;
+    padding-bottom: 90px;
+}
 
-section:not(:first-child) {
-    margin-top: 120px;
-
+#bw-sustainability {
+    background-image: url("https: //github.com/brittain-wynyard/brittain-wynyard.github.io/blob/BW-NEW/images/Earth-layer.svg");
 }
 
 nav li a {
@@ -153,6 +159,10 @@ h5 {
     p {
         font-size: 0.9rem;
     }
+
+    .accordion-item {
+        padding-left: 5%;
+    }
 }
 
 @media (min-width: 768px) {
@@ -177,6 +187,10 @@ h5 {
     h2 {
         font-size: 1.5rem;
     }
+
+    .accordion-item {
+        padding-left: 10%;
+    }
 }
 
 @media (min-width: 1280px) {
@@ -191,6 +205,7 @@ h5 {
     p {
         font-size: 1rem;
     }
+
 }
 
 @media (min-width: 1536px) {
@@ -205,10 +220,18 @@ h5 {
     p {
         font-size: 1rem;
     }
+
+    .accordion-item {
+        padding-left: 21%;
+    }
 }
 
 @media (min-width: 1920px) {
     .animated-scroll-icon {
         margin-top: 10rem;
+    }
+
+    .accordion-item {
+        padding-left: 24%;
     }
 }

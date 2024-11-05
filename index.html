@@ -3,17 +3,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="css/output.css" rel="stylesheet">
     <link href="css/styles.css" rel="stylesheet">
+    <script src="src/script.js"></script>
+
 </head>
 
 <body>
-    <section id="bw-Header">
+    <header class="absolute w-full h-[138px]">
         <nav class="bg-transparent flex justify-center">
             <div
                 class="flex flex-wrap items-center justify-between mx-auto md:px-5 sm:px-10 px-5 xl:py-[45px] lg:py-[15px] sm:py-[15px] py-[35px] absolute z-10 container">
-                <a href="https://flowbite.com/" class="flex items-center space-x-3 rtl:space-x-reverse">
-                    <img src="https://flowbite.com/docs/images/logo.svg" class="2xl:h-12 md:h-8 h-6"
-                        alt="Flowbite Logo" />
-                </a>
+                <img src="images\brands\BW-logo.svg" class="2xl:h-12 md:h-8 h-6" alt="BW Logo" />
                 <button data-collapse-toggle="navbar-default" type="button"
                     class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
                     aria-controls="navbar-default" aria-expanded="false">
@@ -42,8 +41,8 @@
                 </div>
             </div>
         </nav>
-
-
+    </header>
+    <section id="bw-hero">
         <div class="flex justify-center flex-col items-center ">
             <div
                 class="container flex absolute mx-auto z-10 flex-col md:px-5 sm:px-10 px-5 py-5 2xl:gap-3 md:gap-8 sm:gap-8 gap-4">
@@ -73,26 +72,324 @@
                     </svg>
                 </div>
             </div>
-            <video autoplay loop muted class="md:block hidden"
-                poster="images/BW-Homepage-Intro-Desktop-(0-00-00-00).jpg">
-                <source src="images\BW Homepage Intro Desktop.mp4" type="video/mp4" />
-                Your Browser does not support the video tag
-            </video>
-            <video autoplay loop muted class="relative w-auto min-w-full h-auto md:hidden block"
-                poster="images/BW-Homepage-Intro-Mobile-(0-00-00-00).jpg">
-                <source src="images/BW Homepage Intro Mobile.mp4" type="video/mp4" />
-                Your Browser does not support the video tag
-            </video>
+            <div class="w-full max-h-[1080px] overflow-hidden">
+                <video autoplay loop muted class="md:block hidden w-full"
+                    poster="images/BW-Homepage-Intro-Desktop-(0-00-00-00).jpg">
+                    <source src="images\BW Homepage Intro Desktop.mp4" type="video/mp4" />
+                    Your Browser does not support the video tag
+                </video>
+                <video autoplay loop muted class="relative w-auto min-w-full h-auto md:hidden block"
+                    poster="images/BW-Homepage-Intro-Mobile-(0-00-00-00).jpg">
+                    <source src="images/BW Homepage Intro Mobile.mp4" type="video/mp4" />
+                    Your Browser does not support the video tag
+                </video>
+            </div>
         </div>
     </section>
 
-    <section class="container md:px-5 sm:px-10 px-5">
+    <section id="our-brands" class="container md:px-5 sm:px-10 px-5">
         <div class="border-l-2 border-bw-green border-solid lg:pl-6 sm:pl-3 h-[90px]">
             <h2 class="text-bw-grey">Our Brands</h2>
         </div>
         <div>
+            <ul class="flex flex-wrap pt-[90px]">
+                <li class="relative w-2/12 bg-no-repeat bg-contain">
+                    <a href="https://www.asics.com/nz/en-nz/" target="_blank">
+                        <img src="/images/brands/asics-hover.svg" alt="Asics"
+                            class="first:absolute first:opacity-0 hover:opacity-100 ease-in-out duration-300 ">
+                        <img src="/images/brands/asics.svg" class="hover:opacity-0 ease-in-out duration-300"
+                            alt="Asics">
+                    </a>
+                </li>
+                <li class="relative w-2/12 bg-no-repeat bg-contain">
+                    <a href="https://www.birkenstock.co.nz" target="_blank">
+                        <img src="/images/brands/birkenstock-hover.svg" alt="Birkenstock"
+                            class="first:absolute first:opacity-0 hover:opacity-100 ease-in-out duration-300 ">
+                        <img src="/images/brands/birkenstock.svg" class="hover:opacity-0 ease-in-out duration-300"
+                            alt="Birkenstock">
+                    </a>
+                </li>
+                <li class="relative w-2/12 bg-no-repeat bg-contain">
+                    <a href="https://www.timberland.co.nz" target="_blank">
+                        <img src="/images/brands/timberland-hover.svg" alt="Timberland"
+                            class="first:absolute first:opacity-0 hover:opacity-100 ease-in-out duration-300 ">
+                        <img src="/images/brands/timberland.svg" class="hover:opacity-0 ease-in-out duration-300"
+                            alt="Timberland">
+                    </a>
+                </li>
+
+                <li class="relative w-2/12 bg-no-repeat bg-contain">
+                    <a href="https://colemannz.co.nz/" target="_blank">
+                        <img src="/images/brands/coleman-hover.svg" alt="Coleman"
+                            class="first:absolute first:opacity-0 hover:opacity-100 ease-in-out duration-300 ">
+                        <img src="/images/brands/coleman.svg" class="hover:opacity-0 ease-in-out duration-300"
+                            alt="Coleman">
+                    </a>
+                </li>
+
+                <li class="relative w-2/12 bg-no-repeat bg-contain">
+                    <a href="https://nz.wilson.com/" target="_blank">
+                        <img src="/images/brands/wilson-hover.svg" alt="Wilson"
+                            class="first:absolute first:opacity-0 hover:opacity-100 ease-in-out duration-300 ">
+                        <img src="/images/brands/wilson.svg" class="hover:opacity-0 ease-in-out duration-300"
+                            alt="Wilson">
+                    </a>
+                </li>
+
+                <li class="relative w-2/12 bg-no-repeat bg-contain">
+                    <a href="https://www.clifbar.co.nz/" target="_blank">
+                        <img src="/images/brands/clif-bar-hover.svg" alt="Clif Bar"
+                            class="first:absolute first:opacity-0 hover:opacity-100 ease-in-out duration-300 ">
+                        <img src="/images/brands/clif-bar.svg" class="hover:opacity-0 ease-in-out duration-300"
+                            alt="Clif Bar">
+                    </a>
+                </li>
+
+                <li class="relative w-2/12 bg-no-repeat bg-contain">
+                    <a href="/" target="_blank">
+                        <img src="/images/brands/Clarks.svg" alt="Clarks">
+                    </a>
+                </li>
+
+                <li class="relative w-2/12 bg-no-repeat bg-contain">
+                    <a href="https://www.daiwa.co.nz/" target="_blank">
+                        <img src="/images/brands/daiwa-hover.svg" alt="Daiwa"
+                            class="first:absolute first:opacity-0 hover:opacity-100 ease-in-out duration-300 ">
+                        <img src="/images/brands/daiwa.svg" class="hover:opacity-0 ease-in-out duration-300"
+                            alt="Daiwa">
+                    </a>
+                </li>
+
+                <li class="relative w-2/12 bg-no-repeat bg-contain">
+                    <a href="https://www.smartwool.co.nz/" target="_blank">
+                        <img src="/images/brands/smartwool-hover.svg" alt="Smartwool"
+                            class="first:absolute first:opacity-0 hover:opacity-100 ease-in-out duration-300 ">
+                        <img src="/images/brands/smartwool.svg" class="hover:opacity-0 ease-in-out duration-300"
+                            alt="Smartwool">
+                    </a>
+                </li>
+
+                <li class="relative w-2/12 bg-no-repeat bg-contain">
+                    <a href="https://www.gmcricket.com.au/" target="_blank">
+                        <img src="/images/brands/gm.svg" alt="GM">
+                    </a>
+                </li>
+
+                <li class="relative w-2/12 bg-no-repeat bg-contain">
+                    <a href="https://jarviswalker.co.nz/" target="_blank">
+                        <img src="/images/brands/jarvis-walker-hover.svg" alt="Jarvis Walker"
+                            class="first:absolute first:opacity-0 hover:opacity-100 ease-in-out duration-300 ">
+                        <img src="/images/brands/jarvis-walker.svg" class="hover:opacity-0 ease-in-out duration-300"
+                            alt="Jarvis Walker">
+                    </a>
+                </li>
+
+                <li class="relative w-2/12 bg-no-repeat bg-contain">
+                    <a href="https://jarviswalker.co.nz/" target="_blank">
+                        <img src="/images/brands/unicorn-hover.svg" alt="Unicorn"
+                            class="first:absolute first:opacity-0 hover:opacity-100 ease-in-out duration-300 ">
+                        <img src="/images/brands/unicorn.svg" class="hover:opacity-0 ease-in-out duration-300"
+                            alt="Unicorn">
+                    </a>
+                </li>
+
+                <li class="relative w-2/12 bg-no-repeat bg-contain">
+                    <a href="https://www.bridgestonegolf.com/en-us/index" target="_blank">
+                        <img src="/images/brands/bridgestone-hover.svg" alt="Bridgestone"
+                            class="first:absolute first:opacity-0 hover:opacity-100 ease-in-out duration-300 ">
+                        <img src="/images/brands/bridgestone.svg" class="hover:opacity-0 ease-in-out duration-300"
+                            alt="Bridgeston">
+                    </a>
+                </li>
+
+                <li class="relative w-2/12 bg-no-repeat bg-contain">
+                    <a href="https://mgigolf.co.nz" target="_blank">
+                        <img src="/images/brands/mgi-hover.svg" alt="MGI"
+                            class="first:absolute first:opacity-0 hover:opacity-100 ease-in-out duration-300 ">
+                        <img src="/images/brands/mgi.svg" class="hover:opacity-0 ease-in-out duration-300" alt="MGI">
+                    </a>
+                </li>
+
+                <li class="relative w-2/12 bg-no-repeat bg-contain">
+                    <a href="https://www.sunmountain.com/" target="_blank">
+                        <img src="/images/brands/sun-mountain.svg" alt="Sun Mountain">
+                    </a>
+                </li>
+
+                <li class="relative w-2/12 bg-no-repeat bg-contain">
+                    <a href="https://www.skratchlabs.com/" target="_blank">
+                        <img src="/images/brands/Skratch.svg" alt="Skratch">
+                    </a>
+                </li>
+
+                <li class="relative w-2/12 bg-no-repeat bg-contain">
+                    <a href="https://turtleson.com/" target="_blank">
+                        <img src="/images/brands/Turtleson.svg" alt="turtleson">
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="our-expertise" class="">
+        <div class="container border-l-2 border-bw-green border-solid lg:pl-6 sm:pl-3 h-[90px]">
+            <h2 class="text-bw-grey">Our Expertise</h2>
+        </div>
+        <div class="pt-[90px] max-w-[1920px] mx-auto">
+            <div class="w-1/2 ">
+                <div class="accordion-item border-b-2 border-t-2 border-bw-green ">
+                    <button class="accordion-header w-full flex justify-between items-center py-5 text-slate-800"
+                        onclick="toggleAccordion(1)">
+                        <span class="text-xl font-sans font-medium uppercase">Sales</span>
+                        <span id="icon-1"
+                            class="accordion-icon text-slate-800 transition-transform duration-300"></span>
+                    </button>
+                    <div id="content-1" class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                        <div class="pb-5 text-sm text-slate-500">
+                            For both our wholesale and retail customers, we prioritise understanding their needs and
+                            driving
+                            strong sales through exceptional service.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item border-b-2 border-bw-green">
+                    <button class="accordion-header w-full flex justify-between items-center py-5 text-slate-800"
+                        onclick="toggleAccordion(2)">
+                        <span class="text-xl font-sans font-medium uppercase">Marketing</span>
+                        <span id="icon-2"
+                            class="accordion-icon text-slate-800 transition-transform duration-300"></span>
+                    </button>
+                    <div id="content-2" class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                        <div class="pb-5 text-sm text-slate-500">
+                            Our team works with all platforms and mediums of marketing, leveraging a wide range of
+                            strategies to ensure our brands stand out in the market.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item border-b-2 border-bw-green">
+                    <button class="accordion-header w-full flex justify-between items-center py-5 text-slate-800"
+                        onclick="toggleAccordion(3)">
+                        <span class="text-xl font-sans font-medium uppercase">Logistics</span>
+                        <span id="icon-2"
+                            class="accordion-icon text-slate-800 transition-transform duration-300"></span>
+                    </button>
+                    <div id="content-3" class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                        <div class="pb-5 text-sm text-slate-500">
+                            We offer an established logistics solution tailored specifically for the New Zealand market.
+                            With extensive experience
+                            in managing logistics across the country, we optimise our supply chain to ensure the
+                            efficient and timely delivery of
+                            products, meeting the needs of our customers with precision and reliability.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item border-b-2 border-bw-green">
+                    <button class="accordion-header w-full flex justify-between items-center py-5 text-slate-800"
+                        onclick="toggleAccordion(4)">
+                        <span class="text-xl font-sans font-medium uppercase">ECommerce</span>
+                        <span id="icon-2"
+                            class="accordion-icon text-slate-800 transition-transform duration-300"></span>
+                    </button>
+                    <div id="content-4" class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                        <div class="pb-5 text-sm text-slate-500">
+                            We offer an established logistics solution tailored specifically for the New Zealand market.
+                            With extensive experience
+                            in managing logistics across the country, we optimise our supply chain to ensure the
+                            efficient and timely delivery of
+                            products, meeting the needs of our customers with precision and reliability.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item border-b-2 border-bw-green">
+                    <button class="accordion-header w-full flex justify-between items-center py-5 text-slate-800"
+                        onclick="toggleAccordion(5)">
+                        <span class="text-xl font-sans font-medium uppercase">Service & Repairs</span>
+                        <span id="icon-2"
+                            class="accordion-icon text-slate-800 transition-transform duration-300"></span>
+                    </button>
+                    <div id="content-5" class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                        <div class="pb-5 text-sm text-slate-500">
+                            Our experienced Service & Repairs team is available to assess any issues that may arise with
+                            our products and, if
+                            feasible, offer repairs. Whenever possible, our priority is to re-use, repair, or recycle
+                            products to extend their life.
+                            We are committed to helping our customers continue their adventures by ensuring our products
+                            remain in use for many
+                            years to come.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+    </section>
+
+    <section id="our-channels" class="container md:px-5 sm:px-10 px-5">
+        <div class="border-l-2 border-bw-green border-solid lg:pl-6 sm:pl-3 h-[90px]">
+            <h2 class="text-bw-grey">Our Channels</h2>
+        </div>
+        <div class="flex flex-row flex-wrap mt-[65px]">
+            <article class="flex pt-[40px] pb-[40px] w-1/2 border-t-2 border-bw-green">
+                <span class="text-bw-grey">01</span>
+
+                <div class="pl-[130px]">
+                    <h2 class="text-7xl">1000</h2>
+                    <span class="text-4xl">Logistic Wholesale</span>
+                </div>
+            </article>
+            <article class="flex pt-[40px] pb-[40px] w-1/2 border-t-2 border-bw-green">
+                <span class="text-bw-grey">02</span>
+
+                <div class="pl-[130px]">
+                    <h2 class="text-7xl">10</h2>
+                    <span class="text-4xl">Retail Stores</span>
+                </div>
+            </article>
+            <article class="flex pt-[40px] pb-[40px] w-1/2 border-t-2 border-b-2 border-bw-green">
+                <span class="text-bw-grey">03</span>
+
+                <div class="pl-[130px]">
+                    <h2 class="text-7xl">06</h2>
+                    <span class="text-4xl">ECommerce Sites</span>
+                </div>
+            </article>
+            <article class="flex pt-[40px] pb-[40px] w-1/2 border-t-2 border-b-2 border-bw-green">
+                <span class="text-bw-grey">04</span>
+
+                <div class="pl-[130px]">
+                    <h2 class="text-7xl">07</h2>
+                    <span class="text-4xl">Outlet Stores</span>
+                </div>
+            </article>
 
         </div>
+    </section>
+    <section id="bw-sustainability" class="md:px-5 sm:px-10 px-5 bg-bw-green w-svw">
+        <div class="container flex flex-row justify-between">
+            <article class="w-8/12 flex flex-col gap-4">
+                <h2 class="font-sans font-medium text-white">Conscious Choices</h2>
+                <p class="text-white">The environment is a key concern for our brands, our staff, and our community. We
+                    recognise our
+                    responsibility to manage
+                    our operational impacts thoughtfully and we are dedicated to continually improving our environmental
+                    and
+                    sustainability
+                    performance. Part of our sustainability journey is being a proud B Corp certified business because
+                    we
+                    believe doing the
+                    right thing is, simply the right thing to do.
+                </p>
+                <button
+                    class="sustainability-report-link py-4 px-8 mt-12 bg-bw-white border-bw-green transition border-2 rounded-full font-medium text-bw-green max-w-[340px] border-bw-green-1 hover:bg-bw-green hover:text-white hover:border-bw-white hover:border-solid">VIEW
+                    SUSTAINABILITY
+                    REPORT</button>
+            </article>
+
+            <div class="flex items-center justify-center w-3/12">
+                <img src="images\B-Corp-Logo-White-RGB.svg" class="h-[150px]" alt="BW Logo" />
+            </div>
+        </div>
+
+
     </section>
 
 </body>
