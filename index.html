@@ -3,27 +3,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="css/output.css" rel="stylesheet">
     <link href="css/styles.css" rel="stylesheet">
-    <script src="src/script.js"></script>
+    <script src="js/script.js"></script>
+    <script defer src="js/alpine.js"></script>
+    <script src="js/swiper-element-bundle.min.js"></script>
 
 </head>
 
 <body>
     <header class="absolute w-full h-[138px]">
-        <nav class="bg-transparent flex justify-center">
+        <nav x-data="{ mobileMenuIsOpen: false }" @click.away="mobileMenuIsOpen = false"
+            class="bg-transparent flex justify-center">
             <div
-                class="flex flex-wrap items-center justify-between mx-auto md:px-5 sm:px-10 px-5 xl:py-[45px] lg:py-[15px] sm:py-[15px] py-[35px] absolute z-10 container">
-                <img src="images\brands\BW-logo.svg" class="2xl:h-12 md:h-8 h-6" alt="BW Logo" />
-                <button data-collapse-toggle="navbar-default" type="button"
-                    class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+                class="flex flex-wrap items-center justify-between mx-auto md:px-5 sm:px-10 px-[45px] xl:py-[45px] lg:py-[15px] sm:py-[15px] py-[35px] absolute z-10 container gap-8">
+                <img x-cloak x-show="!mobileMenuIsOpen" src="images\brands\BW-logo.svg"
+                    class="2xl:h-12 md:h-10 h-[25px]" alt="BW Logo" />
+
+                <button @click="mobileMenuIsOpen = !mobileMenuIsOpen" :aria-expanded="mobileMenuIsOpen" type="button"
+                    class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-bw-white rounded-lg md:hidden z-20"
                     aria-controls="navbar-default" aria-expanded="false">
                     <span class="sr-only">Open main menu</span>
-                    <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
-                        viewBox="0 0 17 14">
+                    <svg x-cloak x-show="!mobileMenuIsOpen;" class="w-5 h-5" aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
                         <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                             d="M1 1h15M1 7h15M1 13h15" />
                     </svg>
                 </button>
-                <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+                <div class="hidden w-full md:block md:w-auto">
                     <ul class="flex flex-row gap-[20px] p-4 md:p-0 font-sans font-bold uppercase text-center">
                         <li>
                             <a href="#" class="block w-[140px] py-2 px-3 uppercase text-white md:p-0 lg:text-sm text-xs"
@@ -39,27 +44,70 @@
                         </li>
                     </ul>
                 </div>
+                <div x-cloak x-show="mobileMenuIsOpen"
+                    class="flex flex-col overflow-hidden md:hidden md:w-none w-svw h-full top-0 fixed left-0 z-10 bg-bw-grey"
+                    x-transition:enter="transition motion-reduce:transition-none ease-out duration-300"
+                    x-transition:enter-start="-translate-y-full" x-transition:enter-end="translate-y-0"
+                    x-transition:leave="transition motion-reduce:transition-none ease-out duration-300"
+                    x-transition:leave-start="translate-y-0" x-transition:leave-end="-translate-y-full">
+                    <div class="flex flex-row justify-between px-[45px] pt-[35px]">
+                        <img x-cloak x-show="mobileMenuIsOpen" src="images\Brittain Wynyard BW Logo White.svg"
+                            class="h-[3rem]" alt="BW Logo">
+                        <button @click="mobileMenuIsOpen = !mobileMenuIsOpen; " :aria-expanded="mobileMenuIsOpen"
+                            type="button"
+                            class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-bw-white rounded-lg md:hidden z-20"
+                            aria-controls="navbar-default" aria-expanded="false">
+                            <span class="sr-only">Close main menu</span>
+                            <svg x-cloak x-show="mobileMenuIsOpen" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                aria-hidden="true" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
+                                class="size-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                            </svg>
+                        </button>
+                    </div>
+                    <ul class="flex flex-col pt-[65px]">
+                        <li
+                            class="text-[20px] py-[25px] uppercase border-t-2 border-bw-green font-medium text-bw-green px-[45px]">
+                            <a href="#" class="flex flex-row justify-between items-center" aria-current="page">Cs
+                                Portal<span><svg width="39" height="15" viewBox="0 0 39 15" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1 7.9583L37.25 7.9583" stroke="#00362B" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                        <path d="M31.2083 14L37.2499 7.9583L31.2083 1.91663" stroke="#00362B"
+                                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg></span></a>
+                        </li>
+                        <li
+                            class="text-[20px] py-[25px] uppercase border-b-2 border-t-2 border-bw-green font-medium text-bw-green px-[45px]">
+                            <a href="#" class="flex flex-row justify-between items-center" aria-current="page">Contact
+                                <span><svg width="39" height="15" viewBox="0 0 39 15" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1 7.9583L37.25 7.9583" stroke="#00362B" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                        <path d="M31.2083 14L37.2499 7.9583L31.2083 1.91663" stroke="#00362B"
+                                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg></span></a>
+                        </li>
+                    </ul>
+                    <div class="px-[45px] text-center text-bw-green  mt-auto mb-[30px]">
+                        <p>24 Heather Street, Parnell | Info@britwyn.co.nz</p>
+                        <p>Copyright © 2024 Brittain Wynyard. All rights reserved.</p>
+                    </div>
+                </div>
             </div>
         </nav>
     </header>
     <section id="bw-hero">
-        <div class="flex justify-center flex-col items-center ">
+        <div class="flex justify-end flex-col items-center">
             <div
-                class="container flex absolute mx-auto z-10 flex-col md:px-5 sm:px-10 px-5 py-5 2xl:gap-3 md:gap-8 sm:gap-8 gap-4">
+                class="container flex absolute mx-auto z-[8] md:flex-row flex-col md:items-end items-center justify-between md:px-5 sm:px-10 px-[30px] md:py-20 sm:py-10 py-5 mb-10 2xl:gap-3 md:gap-8 sm:gap-8 gap-4">
                 <div class="2xl:w-8/12 xl:w-7/12 lg:w-8/12 md:w-10/12">
-                    <h1 class="font-sans font-medium text-white">New Zealand’s largest distributor of the world’s
+                    <h1 class="font-sans font-medium text-white md:text-left text-center">New Zealand’s largest
+                        distributor of the world’s
                         leading sports, adventure, and lifestyle products.</h1>
                 </div>
-                <article class="2xl:w-4/12 xl:w-6/12 lg:w-6/12 md:w-8/12 ml-auto">
-                    <p class="text-white">Our team delivers a world-class wholesale, marketing, and DTC framework that
-                        enables international
-                        brands to thrive in
-                        New Zealand. Since 1923, our relationships have formed an established network for success. We
-                        are
-                        the full package,
-                        bringing the brands we love to the country we call home.</p>
-                </article>
-                <div class="animated-scroll-icon mx-auto 2xl:mt-[4rem] lg:mt-[3rem] md:mt-[2rem] sm:mt-[6rem]">
+
+                <div class="animated-scroll-icon">
                     <svg class="2xl:w-[40px] lg:w-[30px]  md:w-[20px] sm:w-[35px] w-[25px]" width="30px" height="100%"
                         viewBox="0 0 247 390" version="1.1" xmlns="http://www.w3.org/2000/svg"
                         xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -74,34 +122,46 @@
             </div>
             <div class="w-full max-h-[1080px] overflow-hidden">
                 <video autoplay loop muted class="md:block hidden w-full"
-                    poster="images/BW-Homepage-Intro-Desktop-(0-00-00-00).jpg">
-                    <source src="images\BW Homepage Intro Desktop.mp4" type="video/mp4" />
+                    poster="images/BW-Homepage-Intro-Desktop-(0-00-00-00)_1.jpg">
+                    <source src="images\BW Homepage Desktop.mp4" type="video/mp4" />
                     Your Browser does not support the video tag
                 </video>
                 <video autoplay loop muted class="relative w-auto min-w-full h-auto md:hidden block"
-                    poster="images/BW-Homepage-Intro-Mobile-(0-00-00-00).jpg">
-                    <source src="images/BW Homepage Intro Mobile.mp4" type="video/mp4" />
+                    poster="images/BW-Homepage-Intro-Mobile.jpg">
+                    <source src="images/BW Homepage Mobile.mp4" type="video/mp4" />
                     Your Browser does not support the video tag
                 </video>
             </div>
         </div>
     </section>
 
-    <section id="our-brands" class="container md:px-5 sm:px-10 px-5">
-        <div class="border-l-2 border-bw-green border-solid lg:pl-6 sm:pl-3 h-[90px]">
+    <section id="intro-blurb" class="container md:px-10 px-5">
+        <article class="ml-auto text-center">
+            <h2 class="text-bw-green">Our team delivers a world-class wholesale, marketing, and DTC framework that
+                enables international
+                brands to thrive in
+                New Zealand. Since 1923, our relationships have formed an established network for success. We
+                are
+                the full package,
+                bringing the brands we love to the country we call home.</h2>
+        </article>
+    </section>
+
+    <section id="our-brands" class="container">
+        <div class="heading border-l-2 border-bw-green border-solid lg:pl-6 pl-3 h-[90px]">
             <h2 class="text-bw-grey">Our Brands</h2>
         </div>
-        <div>
-            <ul class="flex flex-wrap pt-[90px]">
-                <li class="relative w-2/12 bg-no-repeat bg-contain">
+        <div class="md:block hidden">
+            <ul class="brand-list flex flex-wrap pt-[90px]">
+                <li class="relative w-3/12 bg-no-repeat bg-contain">
                     <a href="https://www.asics.com/nz/en-nz/" target="_blank">
                         <img src="/images/brands/asics-hover.svg" alt="Asics"
-                            class="first:absolute first:opacity-0 hover:opacity-100 ease-in-out duration-300 ">
+                            class="first:absolute first:opacity-0 hover:opacity-100 ease-in-out duration-300">
                         <img src="/images/brands/asics.svg" class="hover:opacity-0 ease-in-out duration-300"
                             alt="Asics">
                     </a>
                 </li>
-                <li class="relative w-2/12 bg-no-repeat bg-contain">
+                <li class="relative w-3/12 bg-no-repeat bg-contain">
                     <a href="https://www.birkenstock.co.nz" target="_blank">
                         <img src="/images/brands/birkenstock-hover.svg" alt="Birkenstock"
                             class="first:absolute first:opacity-0 hover:opacity-100 ease-in-out duration-300 ">
@@ -109,7 +169,7 @@
                             alt="Birkenstock">
                     </a>
                 </li>
-                <li class="relative w-2/12 bg-no-repeat bg-contain">
+                <li class="relative w-3/12 bg-no-repeat bg-contain">
                     <a href="https://www.timberland.co.nz" target="_blank">
                         <img src="/images/brands/timberland-hover.svg" alt="Timberland"
                             class="first:absolute first:opacity-0 hover:opacity-100 ease-in-out duration-300 ">
@@ -118,7 +178,7 @@
                     </a>
                 </li>
 
-                <li class="relative w-2/12 bg-no-repeat bg-contain">
+                <li class="relative w-3/12 bg-no-repeat bg-contain">
                     <a href="https://colemannz.co.nz/" target="_blank">
                         <img src="/images/brands/coleman-hover.svg" alt="Coleman"
                             class="first:absolute first:opacity-0 hover:opacity-100 ease-in-out duration-300 ">
@@ -127,7 +187,7 @@
                     </a>
                 </li>
 
-                <li class="relative w-2/12 bg-no-repeat bg-contain">
+                <li class="relative w-3/12 bg-no-repeat bg-contain">
                     <a href="https://nz.wilson.com/" target="_blank">
                         <img src="/images/brands/wilson-hover.svg" alt="Wilson"
                             class="first:absolute first:opacity-0 hover:opacity-100 ease-in-out duration-300 ">
@@ -136,7 +196,7 @@
                     </a>
                 </li>
 
-                <li class="relative w-2/12 bg-no-repeat bg-contain">
+                <li class="relative w-3/12 bg-no-repeat bg-contain">
                     <a href="https://www.clifbar.co.nz/" target="_blank">
                         <img src="/images/brands/clif-bar-hover.svg" alt="Clif Bar"
                             class="first:absolute first:opacity-0 hover:opacity-100 ease-in-out duration-300 ">
@@ -145,13 +205,13 @@
                     </a>
                 </li>
 
-                <li class="relative w-2/12 bg-no-repeat bg-contain">
+                <li class="relative w-3/12 bg-no-repeat bg-contain">
                     <a href="/" target="_blank">
                         <img src="/images/brands/Clarks.svg" alt="Clarks">
                     </a>
                 </li>
 
-                <li class="relative w-2/12 bg-no-repeat bg-contain">
+                <li class="relative w-3/12 bg-no-repeat bg-contain">
                     <a href="https://www.daiwa.co.nz/" target="_blank">
                         <img src="/images/brands/daiwa-hover.svg" alt="Daiwa"
                             class="first:absolute first:opacity-0 hover:opacity-100 ease-in-out duration-300 ">
@@ -160,7 +220,7 @@
                     </a>
                 </li>
 
-                <li class="relative w-2/12 bg-no-repeat bg-contain">
+                <li class="relative w-3/12 bg-no-repeat bg-contain">
                     <a href="https://www.smartwool.co.nz/" target="_blank">
                         <img src="/images/brands/smartwool-hover.svg" alt="Smartwool"
                             class="first:absolute first:opacity-0 hover:opacity-100 ease-in-out duration-300 ">
@@ -169,13 +229,19 @@
                     </a>
                 </li>
 
-                <li class="relative w-2/12 bg-no-repeat bg-contain">
+                <li class="relative w-3/12 bg-no-repeat bg-contain">
                     <a href="https://www.gmcricket.com.au/" target="_blank">
                         <img src="/images/brands/gm.svg" alt="GM">
                     </a>
                 </li>
 
-                <li class="relative w-2/12 bg-no-repeat bg-contain">
+                <li class="relative w-3/12 bg-no-repeat bg-contain">
+                    <a href="https://www.garmin.com/en-NZ/" target="_blank">
+                        <img src="/images/brands/Garmin.svg" alt="Garmin">
+                    </a>
+                </li>
+
+                <li class="relative w-3/12 bg-no-repeat bg-contain">
                     <a href="https://jarviswalker.co.nz/" target="_blank">
                         <img src="/images/brands/jarvis-walker-hover.svg" alt="Jarvis Walker"
                             class="first:absolute first:opacity-0 hover:opacity-100 ease-in-out duration-300 ">
@@ -184,7 +250,7 @@
                     </a>
                 </li>
 
-                <li class="relative w-2/12 bg-no-repeat bg-contain">
+                <li class="relative w-3/12 bg-no-repeat bg-contain">
                     <a href="https://jarviswalker.co.nz/" target="_blank">
                         <img src="/images/brands/unicorn-hover.svg" alt="Unicorn"
                             class="first:absolute first:opacity-0 hover:opacity-100 ease-in-out duration-300 ">
@@ -193,7 +259,7 @@
                     </a>
                 </li>
 
-                <li class="relative w-2/12 bg-no-repeat bg-contain">
+                <li class="relative w-3/12 bg-no-repeat bg-contain">
                     <a href="https://www.bridgestonegolf.com/en-us/index" target="_blank">
                         <img src="/images/brands/bridgestone-hover.svg" alt="Bridgestone"
                             class="first:absolute first:opacity-0 hover:opacity-100 ease-in-out duration-300 ">
@@ -202,7 +268,7 @@
                     </a>
                 </li>
 
-                <li class="relative w-2/12 bg-no-repeat bg-contain">
+                <li class="relative w-3/12 bg-no-repeat bg-contain">
                     <a href="https://mgigolf.co.nz" target="_blank">
                         <img src="/images/brands/mgi-hover.svg" alt="MGI"
                             class="first:absolute first:opacity-0 hover:opacity-100 ease-in-out duration-300 ">
@@ -210,162 +276,242 @@
                     </a>
                 </li>
 
-                <li class="relative w-2/12 bg-no-repeat bg-contain">
+                <li class="relative w-3/12 bg-no-repeat bg-contain">
                     <a href="https://www.sunmountain.com/" target="_blank">
                         <img src="/images/brands/sun-mountain.svg" alt="Sun Mountain">
                     </a>
                 </li>
 
-                <li class="relative w-2/12 bg-no-repeat bg-contain">
+                <li class="relative w-3/12 bg-no-repeat bg-contain">
                     <a href="https://www.skratchlabs.com/" target="_blank">
                         <img src="/images/brands/Skratch.svg" alt="Skratch">
                     </a>
                 </li>
 
-                <li class="relative w-2/12 bg-no-repeat bg-contain">
+                <li class="relative w-3/12 bg-no-repeat bg-contain">
                     <a href="https://turtleson.com/" target="_blank">
                         <img src="/images/brands/Turtleson.svg" alt="turtleson">
                     </a>
                 </li>
+
+                <li class="relative w-3/12 bg-no-repeat bg-contain">
+                    <a href="https://jarviswalker.co.nz/collections/watersnake" target="_blank">
+                        <img src="/images/brands/Watersnake-hover.svg" alt="Kovea"
+                            class="first:absolute first:opacity-0 hover:opacity-100 ease-in-out duration-300 ">
+                        <img src=" /images/brands/watersnake.svg" class="hover:opacity-0 ease-in-out duration-300"
+                            alt="Watersnake">
+                    </a>
+                </li>
+                <li class="relative w-3/12 bg-no-repeat bg-contain">
+                    <a href="https://www.kovea.com/" target="_blank">
+                        <img src="/images/brands/Kovea.svg" alt="Kovea"
+                            class="first:absolute first:opacity-0 hover:opacity-100 ease-in-out duration-300 ">
+                        <img src=" /images/brands/kovea-hover.svg" class="hover:opacity-0 ease-in-out duration-300"
+                            alt="Kovea">
+                    </a>
+                </li>
             </ul>
+        </div>
+        <div class="md:hidden block container relative">
+            <button type="button" role="button" id="recently-viewed-next-arrow" aria-label="Next"
+                aria-controls="pm-product-recently-viewed" class="swiper-custom-arrow next">
+                Next
+            </button>
+            <button type="button" role="button" id="recently-viewed-prev-arrow" aria-label="Previous"
+                aria-controls="pm-product-recently-viewed" class="swiper-custom-arrow prev">
+                Prev
+            </button>
+            <swiper-container navigation-next-el="#recently-viewed-next-arrow"
+                navigation-prev-el="#recently-viewed-prev-arrow" scrollbar="true" rewind="true">
+                <swiper-slide><a href="https://www.asics.com/nz/en-nz/" target="_blank"></a><img
+                        src="/images/brands/asics.svg" alt="Asics"></a></swiper-slide>
+                <swiper-slide><a href="https://www.birkenstock.co.nz" target="_blank"><img
+                            src="/images/brands/birkenstock.svg" alt="Birkenstock"></a></swiper-slide>
+                <swiper-slide><a href="https://www.timberland.co.nz/" target="_blank"></a><img
+                        src="/images/brands/timberland.svg" alt="Timberland"></a></swiper-slide>
+                <swiper-slide><a href="https://colemannz.co.nz/" target="_blank"></a><img
+                        src="/images/brands/coleman.svg" alt="Coleman"></a></swiper-slide>
+                <swiper-slide><a href="https://nz.wilson.com/" target="_blank"></a><img src="/images/brands/wilson.svg"
+                        alt="Wilson"></a></swiper-slide>
+                <swiper-slide><a href="https://www.clifbar.co.nz/" target="_blank"></a><img
+                        src="/images/brands/clif-bar-hover.svg" alt="Clif Bar"></a></swiper-slide>
+                <swiper-slide><img src="/images/brands/Clarks.svg" alt="Clif Bar"></a></swiper-slide>
+                <swiper-slide><a href="https://www.daiwa.co.nz/" target="_blank"></a><img
+                        src="/images/brands/daiwa-hover.svg" alt="Daiwa"></a></swiper-slide>
+                <swiper-slide><a href="https://www.playwiththebest.com/cricket.html" target="_blank"></a><img
+                        src="/images/brands/gm-hover.svg" alt="Gunn & Moore"></a></swiper-slide>
+                <swiper-slide><a href="https://www.garmin.com/en-NZ/" target="_blank"></a><img
+                        src="/images/brands/Garmin.svg" alt="Garmin"></a></swiper-slide>
+                <swiper-slide><a href="https://jarviswalker.co.nz/" target="_blank"></a><img
+                        src="/images/brands/jarvis-walker-hover.svg" alt="Garmin"></a></swiper-slide>
+                <swiper-slide><a href="https://unicorn-darts.com/" target="_blank"></a><img
+                        src="/images/brands/unicorn-hover.svg" alt="Unicorn"></a></swiper-slide>
+                <swiper-slide><a href="https://www.bridgestonegolf.com/en-us/index" target="_blank"></a><img
+                        src="/images/brands/bridgestone-hover.svg" alt="Bridgestone"></a></swiper-slide>
+                <swiper-slide><a href="https://mgigolf.com/" target="_blank"></a><img src="/images/brands/mgi-hover.svg"
+                        alt="MGI>"></a></swiper-slide>
+                <swiper-slide><a href="https://mgigolf.com/" target="_blank"></a><img src="/images/brands/mgi-hover.svg"
+                        alt="MGI>"></a></swiper-slide>
+                <swiper-slide><a href="https://www.sunmountain.com/" target="_blank"></a><img
+                        src="/images/brands/sun-mountain-hover.svg" alt="Sun Mountain"></a></swiper-slide>
+                <swiper-slide><a href="https://www.skratchlabs.com/" target="_blank"></a><img
+                        src="/images/brands/Skratch.svg" alt="Skratch"></a></swiper-slide>
+                <swiper-slide><a href="https://turtleson.com/" target="_blank"></a><img
+                        src="/images/brands/Turtleson.svg" alt="Turtleson"></a></swiper-slide>
+                <swiper-slide><a href="https://jarviswalker.co.nz/collections/watersnake" target="_blank"></a><img
+                        src="/images/brands/Watersnake-hover.svg" alt="Watersnake"></a></swiper-slide>
+                <swiper-slide><a href="https://www.kovea.com/" target="_blank"></a><img
+                        src="/images/brands/Kovea-hover.svg" alt="Kovea"></a></swiper-slide>
+            </swiper-container>
+
         </div>
     </section>
 
-    <section id="our-expertise" class="">
-        <div class="container border-l-2 border-bw-green border-solid lg:pl-6 sm:pl-3 h-[90px]">
+    <section id="our-expertise">
+        <div class="heading container border-l-2 border-bw-green border-solid lg:pl-6 pl-3 h-[90px] ">
             <h2 class="text-bw-grey">Our Expertise</h2>
         </div>
-        <div class="pt-[90px] max-w-[1920px] mx-auto">
-            <div class="w-1/2 ">
-                <div class="accordion-item border-b-2 border-t-2 border-bw-green ">
-                    <button class="accordion-header w-full flex justify-between items-center py-5 text-slate-800"
-                        onclick="toggleAccordion(1)">
-                        <span class="text-xl font-sans font-medium uppercase">Sales</span>
-                        <span id="icon-1"
-                            class="accordion-icon text-slate-800 transition-transform duration-300"></span>
-                    </button>
-                    <div id="content-1" class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
-                        <div class="pb-5 text-sm text-slate-500">
-                            For both our wholesale and retail customers, we prioritise understanding their needs and
-                            driving
-                            strong sales through exceptional service.
+        <div>
+            <div class="flex flex-row pt-[90px] max-w-[1920px] mx-auto">
+                <div class="accordion-list md:w-1/2 w-full">
+                    <div class="accordion-item border-b-2 border-t-2 border-bw-green"
+                        data-src="https://github.com/brittain-wynyard/brittain-wynyard.github.io/blob/BW-NEW/images/JPEG_HIGH_0054.jpg">
+                        <button class="accordion-header w-full flex justify-between items-center py-5 text-slate-800"
+                            onclick="toggleAccordion(1)">
+                            <span class="text-xl font-sans font-medium uppercase">Sales</span>
+                            <span id="icon-1"
+                                class="accordion-icon text-slate-800 transition-transform duration-300"></span>
+                        </button>
+                        <div id="content-1" class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                            <div class="pb-5 text-sm text-slate-500">
+                                For both our wholesale and retail customers, we prioritise understanding their needs and
+                                driving
+                                strong sales through exceptional service.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item border-b-2 border-bw-green">
+                        <button class="accordion-header w-full flex justify-between items-center py-5 text-slate-800"
+                            onclick="toggleAccordion(2)">
+                            <span class="text-xl font-sans font-medium uppercase">Marketing</span>
+                            <span id="icon-2"
+                                class="accordion-icon text-slate-800 transition-transform duration-300"></span>
+                        </button>
+                        <div id="content-2" class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                            <div class="pb-5 text-sm text-slate-500">
+                                Our team works with all platforms and mediums of marketing, leveraging a wide range of
+                                strategies to ensure our brands stand out in the market.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item border-b-2 border-bw-green">
+                        <button class="accordion-header w-full flex justify-between items-center py-5 text-slate-800"
+                            onclick="toggleAccordion(3)">
+                            <span class="text-xl font-sans font-medium uppercase">Logistics</span>
+                            <span id="icon-2"
+                                class="accordion-icon text-slate-800 transition-transform duration-300"></span>
+                        </button>
+                        <div id="content-3" class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                            <div class="pb-5 text-sm text-slate-500">
+                                We offer an established logistics solution tailored specifically for the New Zealand
+                                market.
+                                With extensive experience
+                                in managing logistics across the country, we optimise our supply chain to ensure the
+                                efficient and timely delivery of
+                                products, meeting the needs of our customers with precision and reliability.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item border-b-2 border-bw-green">
+                        <button class="accordion-header w-full flex justify-between items-center py-5 text-slate-800"
+                            onclick="toggleAccordion(4)">
+                            <span class="text-xl font-sans font-medium uppercase">ECommerce</span>
+                            <span id="icon-2"
+                                class="accordion-icon text-slate-800 transition-transform duration-300"></span>
+                        </button>
+                        <div id="content-4" class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                            <div class="pb-5 text-sm text-slate-500">
+                                We offer an established logistics solution tailored specifically for the New Zealand
+                                market.
+                                With extensive experience
+                                in managing logistics across the country, we optimise our supply chain to ensure the
+                                efficient and timely delivery of
+                                products, meeting the needs of our customers with precision and reliability.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item border-b-2 border-bw-green">
+                        <button class="accordion-header w-full flex justify-between items-center py-5 text-slate-800"
+                            onclick="toggleAccordion(5)">
+                            <span class="text-xl font-sans font-medium uppercase">Service & Repairs</span>
+                            <span id="icon-2"
+                                class="accordion-icon text-slate-800 transition-transform duration-300"></span>
+                        </button>
+                        <div id="content-5" class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                            <div class="pb-5 text-sm text-slate-500">
+                                Our experienced Service & Repairs team is available to assess any issues that may arise
+                                with
+                                our products and, if
+                                feasible, offer repairs. Whenever possible, our priority is to re-use, repair, or
+                                recycle
+                                products to extend their life.
+                                We are committed to helping our customers continue their adventures by ensuring our
+                                products
+                                remain in use for many
+                                years to come.
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="accordion-item border-b-2 border-bw-green">
-                    <button class="accordion-header w-full flex justify-between items-center py-5 text-slate-800"
-                        onclick="toggleAccordion(2)">
-                        <span class="text-xl font-sans font-medium uppercase">Marketing</span>
-                        <span id="icon-2"
-                            class="accordion-icon text-slate-800 transition-transform duration-300"></span>
-                    </button>
-                    <div id="content-2" class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
-                        <div class="pb-5 text-sm text-slate-500">
-                            Our team works with all platforms and mediums of marketing, leveraging a wide range of
-                            strategies to ensure our brands stand out in the market.
-                        </div>
-                    </div>
-                </div>
-                <div class="accordion-item border-b-2 border-bw-green">
-                    <button class="accordion-header w-full flex justify-between items-center py-5 text-slate-800"
-                        onclick="toggleAccordion(3)">
-                        <span class="text-xl font-sans font-medium uppercase">Logistics</span>
-                        <span id="icon-2"
-                            class="accordion-icon text-slate-800 transition-transform duration-300"></span>
-                    </button>
-                    <div id="content-3" class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
-                        <div class="pb-5 text-sm text-slate-500">
-                            We offer an established logistics solution tailored specifically for the New Zealand market.
-                            With extensive experience
-                            in managing logistics across the country, we optimise our supply chain to ensure the
-                            efficient and timely delivery of
-                            products, meeting the needs of our customers with precision and reliability.
-                        </div>
-                    </div>
-                </div>
-                <div class="accordion-item border-b-2 border-bw-green">
-                    <button class="accordion-header w-full flex justify-between items-center py-5 text-slate-800"
-                        onclick="toggleAccordion(4)">
-                        <span class="text-xl font-sans font-medium uppercase">ECommerce</span>
-                        <span id="icon-2"
-                            class="accordion-icon text-slate-800 transition-transform duration-300"></span>
-                    </button>
-                    <div id="content-4" class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
-                        <div class="pb-5 text-sm text-slate-500">
-                            We offer an established logistics solution tailored specifically for the New Zealand market.
-                            With extensive experience
-                            in managing logistics across the country, we optimise our supply chain to ensure the
-                            efficient and timely delivery of
-                            products, meeting the needs of our customers with precision and reliability.
-                        </div>
-                    </div>
-                </div>
-                <div class="accordion-item border-b-2 border-bw-green">
-                    <button class="accordion-header w-full flex justify-between items-center py-5 text-slate-800"
-                        onclick="toggleAccordion(5)">
-                        <span class="text-xl font-sans font-medium uppercase">Service & Repairs</span>
-                        <span id="icon-2"
-                            class="accordion-icon text-slate-800 transition-transform duration-300"></span>
-                    </button>
-                    <div id="content-5" class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
-                        <div class="pb-5 text-sm text-slate-500">
-                            Our experienced Service & Repairs team is available to assess any issues that may arise with
-                            our products and, if
-                            feasible, offer repairs. Whenever possible, our priority is to re-use, repair, or recycle
-                            products to extend their life.
-                            We are committed to helping our customers continue their adventures by ensuring our products
-                            remain in use for many
-                            years to come.
-                        </div>
-                    </div>
+                <div class="menu-image-holder md:w-1/2 w-full">
                 </div>
             </div>
 
     </section>
 
-    <section id="our-channels" class="container md:px-5 sm:px-10 px-5">
-        <div class="border-l-2 border-bw-green border-solid lg:pl-6 sm:pl-3 h-[90px]">
+    <section id="our-channels" class="container">
+        <div class="heading border-l-2 border-bw-green border-solid lg:pl-6 pl-3 h-[90px]">
             <h2 class="text-bw-grey">Our Channels</h2>
         </div>
-        <div class="flex flex-row flex-wrap mt-[65px]">
-            <article class="flex pt-[40px] pb-[40px] w-1/2 border-t-2 border-bw-green">
+        <div class="flex md:flex-row flex-col flex-wrap mt-[65px] sm:mx-0 mx-[40px]">
+            <article class="flex pt-[40px] pb-[40px] md:w-1/2 w-full border-t-2 border-bw-green">
                 <span class="text-bw-grey">01</span>
 
-                <div class="pl-[130px]">
-                    <h2 class="text-7xl">1000</h2>
-                    <span class="text-4xl">Logistic Wholesale</span>
+                <div class="lg:pl-[130px] pl-[50px]">
+                    <h2 class="md:text-7xl text-[54px]">1000</h2>
+                    <span class="md:text-4xl text-3xl">Logistic Wholesale</span>
                 </div>
             </article>
-            <article class="flex pt-[40px] pb-[40px] w-1/2 border-t-2 border-bw-green">
+            <article class="flex pt-[40px] pb-[40px] md:w-1/2 w-full border-t-2 border-bw-green">
                 <span class="text-bw-grey">02</span>
 
-                <div class="pl-[130px]">
-                    <h2 class="text-7xl">10</h2>
-                    <span class="text-4xl">Retail Stores</span>
+                <div class="lg:pl-[130px] pl-[50px]">
+                    <h2 class="md:text-7xl text-[54px]">10</h2>
+                    <span class="md:text-4xl text-3xl">Retail Stores</span>
                 </div>
             </article>
-            <article class="flex pt-[40px] pb-[40px] w-1/2 border-t-2 border-b-2 border-bw-green">
+            <article class="flex pt-[40px] pb-[40px] md:w-1/2 w-full border-t-2 border-bw-green">
                 <span class="text-bw-grey">03</span>
 
-                <div class="pl-[130px]">
-                    <h2 class="text-7xl">06</h2>
-                    <span class="text-4xl">ECommerce Sites</span>
+                <div class="lg:pl-[130px] pl-[50px]">
+                    <h2 class="md:text-7xl text-[54px]">06</h2>
+                    <span class="md:text-4xl text-3xl">ECommerce Sites</span>
                 </div>
             </article>
-            <article class="flex pt-[40px] pb-[40px] w-1/2 border-t-2 border-b-2 border-bw-green">
+            <article class="flex pt-[40px] pb-[40px] md:w-1/2 w-full border-t-2 border-bw-green">
                 <span class="text-bw-grey">04</span>
 
-                <div class="pl-[130px]">
-                    <h2 class="text-7xl">07</h2>
-                    <span class="text-4xl">Outlet Stores</span>
+                <div class="lg:pl-[130px] pl-[50px]">
+                    <h2 class="md:text-7xl text-[54px]">07</h2>
+                    <span class="md:text-4xl text-3xl">Outlet Stores</span>
                 </div>
             </article>
 
         </div>
     </section>
-    <section id="bw-sustainability" class="md:px-5 sm:px-10 px-5 bg-bw-green w-svw">
-        <div class="container flex flex-row justify-between">
-            <article class="w-8/12 flex flex-col gap-4">
+    <section id="bw-sustainability" class="md:px-5 sm:px-10 px-8 bg-bw-green w-svw mt-[90px]">
+        <div class="heading container flex md:flex-row flex-col justify-between gap-20">
+            <article class="md:w-8/12 w-full flex flex-col gap-4">
                 <h2 class="font-sans font-medium text-white">Conscious Choices</h2>
                 <p class="text-white">The environment is a key concern for our brands, our staff, and our community. We
                     recognise our
@@ -388,8 +534,26 @@
                 <img src="images\B-Corp-Logo-White-RGB.svg" class="h-[150px]" alt="BW Logo" />
             </div>
         </div>
-
-
     </section>
+
+    <footer class="bg-bw-grey">
+        <div
+            class="md:container flex md:flex-row flex-col justify-between pt-[60px] md:pb-[180px] pb-[60px] px-8 md:gap-0 gap-4">
+            <div class="md:w-3/12 w-full">
+                <p class="font-medium font-sans">Contact Us</p>
+                <p>+64 9 306 7200<br>info@britwyn.co.nz</p><br>
+                <p>24 Heather Street, Parnell, Auckland 1052, New Zealand</p><br>
+                <p>Unit 4/433 Saint Asaph Street, Phillipstown, Christchurch 8011</p>
+            </div>
+            <div class="md:w-3/12 w-full md:text-right text-left flex flex-col justify-between">
+                <ul>
+                    <li>Careers</li>
+                    <li>Code of Ethics</li>
+                    <li>Privacy Policy</li>
+                </ul>
+                <p class="md:pt-0 pt-[25px]">Copyright © 2024 Brittain Wynyard. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
 
 </body>
