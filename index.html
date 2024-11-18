@@ -3,9 +3,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="css/output.css" rel="stylesheet">
     <link href="css/styles.css" rel="stylesheet">
+    <link href="css/aos.css" rel="stylesheet">
     <script src="js/script.js"></script>
     <script defer src="js/alpine.js"></script>
     <script src="js/swiper-element-bundle.min.js"></script>
+    <script defer src="js/aos.js"></script>
 
 </head>
 
@@ -99,7 +101,7 @@
     </header>
     <section id="bw-hero">
         <div class="flex justify-end flex-col items-center">
-            <div
+            <div data-aos="fade-right" data-aos-duration="1000" data-aos-delay="500"
                 class="container flex absolute mx-auto z-[8] md:flex-row flex-col md:items-end items-center justify-between md:px-5 sm:px-10 px-[30px] md:py-20 sm:py-10 py-5 mb-10 2xl:gap-3 md:gap-8 sm:gap-8 gap-4">
                 <div class="2xl:w-8/12 xl:w-7/12 lg:w-8/12 md:w-10/12">
                     <h1 class="font-sans font-medium text-white md:text-left text-center">New Zealand’s largest
@@ -107,7 +109,7 @@
                         leading sports, adventure, and lifestyle products.</h1>
                 </div>
 
-                <div class="animated-scroll-icon">
+                <div class="animated-scroll-icon" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="2000">
                     <svg class="2xl:w-[40px] lg:w-[30px]  md:w-[20px] sm:w-[35px] w-[25px]" width="30px" height="100%"
                         viewBox="0 0 247 390" version="1.1" xmlns="http://www.w3.org/2000/svg"
                         xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -149,7 +151,7 @@
 
     <section id="our-brands" class="container">
         <div class="heading border-l-2 border-bw-green border-solid lg:pl-6 pl-3 h-[90px]">
-            <h2 class="text-bw-grey">Our Brands</h2>
+            <h2 class="text-bw-grey" data-aos="fade-left" data-aos-duration="1000">Our Brands</h2>
         </div>
         <div class="md:block hidden">
             <ul class="brand-list flex flex-wrap pt-[90px]">
@@ -371,101 +373,102 @@
         <div class="heading container border-l-2 border-bw-green border-solid lg:pl-6 pl-3 h-[90px] ">
             <h2 class="text-bw-grey">Our Expertise</h2>
         </div>
-        <div>
-            <div class="flex flex-row pt-[90px] max-w-[1920px] mx-auto">
-                <div class="accordion-list md:w-1/2 w-full">
-                    <div class="accordion-item border-b-2 border-t-2 border-bw-green"
-                        data-src="https://github.com/brittain-wynyard/brittain-wynyard.github.io/blob/BW-NEW/images/JPEG_HIGH_0054.jpg">
-                        <button class="accordion-header w-full flex justify-between items-center py-5 text-slate-800"
-                            onclick="toggleAccordion(1)">
-                            <span class="text-xl font-sans font-medium uppercase">Sales</span>
-                            <span id="icon-1"
-                                class="accordion-icon text-slate-800 transition-transform duration-300"></span>
-                        </button>
-                        <div id="content-1" class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
-                            <div class="pb-5 text-sm text-slate-500">
-                                For both our wholesale and retail customers, we prioritise understanding their needs and
-                                driving
-                                strong sales through exceptional service.
-                            </div>
-                        </div>
-                    </div>
-                    <div class="accordion-item border-b-2 border-bw-green">
-                        <button class="accordion-header w-full flex justify-between items-center py-5 text-slate-800"
-                            onclick="toggleAccordion(2)">
-                            <span class="text-xl font-sans font-medium uppercase">Marketing</span>
-                            <span id="icon-2"
-                                class="accordion-icon text-slate-800 transition-transform duration-300"></span>
-                        </button>
-                        <div id="content-2" class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
-                            <div class="pb-5 text-sm text-slate-500">
-                                Our team works with all platforms and mediums of marketing, leveraging a wide range of
-                                strategies to ensure our brands stand out in the market.
-                            </div>
-                        </div>
-                    </div>
-                    <div class="accordion-item border-b-2 border-bw-green">
-                        <button class="accordion-header w-full flex justify-between items-center py-5 text-slate-800"
-                            onclick="toggleAccordion(3)">
-                            <span class="text-xl font-sans font-medium uppercase">Logistics</span>
-                            <span id="icon-2"
-                                class="accordion-icon text-slate-800 transition-transform duration-300"></span>
-                        </button>
-                        <div id="content-3" class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
-                            <div class="pb-5 text-sm text-slate-500">
-                                We offer an established logistics solution tailored specifically for the New Zealand
-                                market.
-                                With extensive experience
-                                in managing logistics across the country, we optimise our supply chain to ensure the
-                                efficient and timely delivery of
-                                products, meeting the needs of our customers with precision and reliability.
-                            </div>
-                        </div>
-                    </div>
-                    <div class="accordion-item border-b-2 border-bw-green">
-                        <button class="accordion-header w-full flex justify-between items-center py-5 text-slate-800"
-                            onclick="toggleAccordion(4)">
-                            <span class="text-xl font-sans font-medium uppercase">ECommerce</span>
-                            <span id="icon-2"
-                                class="accordion-icon text-slate-800 transition-transform duration-300"></span>
-                        </button>
-                        <div id="content-4" class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
-                            <div class="pb-5 text-sm text-slate-500">
-                                We offer an established logistics solution tailored specifically for the New Zealand
-                                market.
-                                With extensive experience
-                                in managing logistics across the country, we optimise our supply chain to ensure the
-                                efficient and timely delivery of
-                                products, meeting the needs of our customers with precision and reliability.
-                            </div>
-                        </div>
-                    </div>
-                    <div class="accordion-item border-b-2 border-bw-green">
-                        <button class="accordion-header w-full flex justify-between items-center py-5 text-slate-800"
-                            onclick="toggleAccordion(5)">
-                            <span class="text-xl font-sans font-medium uppercase">Service & Repairs</span>
-                            <span id="icon-2"
-                                class="accordion-icon text-slate-800 transition-transform duration-300"></span>
-                        </button>
-                        <div id="content-5" class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
-                            <div class="pb-5 text-sm text-slate-500">
-                                Our experienced Service & Repairs team is available to assess any issues that may arise
-                                with
-                                our products and, if
-                                feasible, offer repairs. Whenever possible, our priority is to re-use, repair, or
-                                recycle
-                                products to extend their life.
-                                We are committed to helping our customers continue their adventures by ensuring our
-                                products
-                                remain in use for many
-                                years to come.
-                            </div>
+        <div class="flex md:flex-row flex-col-reverse pt-[90px] max-w-[1920px] mx-auto">
+            <div class="accordion-list md:w-1/2 w-full">
+                <div class="accordion-item border-b-2 border-t-2 border-bw-green pt-[10px] pb-[10px] pr-[20px]"
+                    data-src="images/JPEG_HIGH_0054.jpg">
+                    <button class="accordion-header w-full flex justify-between items-center py-8 text-slate-800"
+                        onclick="toggleAccordion(1)">
+                        <span class="text-xl font-sans font-medium uppercase">Sales</span>
+                        <span id="icon-1"
+                            class="accordion-icon text-slate-800 transition-transform duration-300"></span>
+                    </button>
+                    <div id="content-1" class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                        <div class="pb-5 pr-5 text-sm text-slate-500">
+                            For both our wholesale and retail customers, we prioritise understanding their needs and
+                            driving
+                            strong sales through exceptional service.
                         </div>
                     </div>
                 </div>
-                <div class="menu-image-holder md:w-1/2 w-full">
+                <div class="accordion-item border-b-2 border-bw-green pt-[10px] pb-[10px]">
+                    <button class="accordion-header w-full flex justify-between items-center py-8 text-slate-800"
+                        onclick="toggleAccordion(2)">
+                        <span class="text-xl font-sans font-medium uppercase">Marketing</span>
+                        <span id="icon-2"
+                            class="accordion-icon text-slate-800 transition-transform duration-300"></span>
+                    </button>
+                    <div id="content-2" class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                        <div class="pb-5 pr-5 text-sm text-slate-500">
+                            Our team works with all platforms and mediums of marketing, leveraging a wide range of
+                            strategies to ensure our brands stand out in the market.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item border-b-2 border-bw-green pt-[10px] pb-[10px]"
+                    data-src="images/CommBay_StorePhotos_July23-6303.jpg">
+                    <button class="accordion-header w-full flex justify-between items-center py-8 text-slate-800"
+                        onclick="toggleAccordion(3)">
+                        <span class="text-xl font-sans font-medium uppercase">Logistics</span>
+                        <span id="icon-2"
+                            class="accordion-icon text-slate-800 transition-transform duration-300"></span>
+                    </button>
+                    <div id="content-3" class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                        <div class="pb-5 pr-5 text-sm text-slate-500">
+                            We offer an established logistics solution tailored specifically for the New Zealand
+                            market.
+                            With extensive experience
+                            in managing logistics across the country, we optimise our supply chain to ensure the
+                            efficient and timely delivery of
+                            products, meeting the needs of our customers with precision and reliability.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item border-b-2 border-bw-green pt-[10px] pb-[10px]"
+                    data-src="images/ecommerce-timberland-website.jpg">
+                    <button class="accordion-header w-full flex justify-between items-center py-8 text-slate-800"
+                        onclick="toggleAccordion(4)">
+                        <span class="text-xl font-sans font-medium uppercase">ECommerce</span>
+                        <span id="icon-2"
+                            class="accordion-icon text-slate-800 transition-transform duration-300"></span>
+                    </button>
+                    <div id="content-4" class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                        <div class="pb-5 pr-5 text-sm text-slate-500">
+                            We offer an established logistics solution tailored specifically for the New Zealand
+                            market.
+                            With extensive experience
+                            in managing logistics across the country, we optimise our supply chain to ensure the
+                            efficient and timely delivery of
+                            products, meeting the needs of our customers with precision and reliability.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item border-b-2 border-bw-green pt-[10px] pb-[10px]">
+                    <button class="accordion-header w-full flex justify-between items-center py-8 text-slate-800"
+                        onclick="toggleAccordion(5)">
+                        <span class="text-xl font-sans font-medium uppercase">Service & Repairs</span>
+                        <span id="icon-2"
+                            class="accordion-icon text-slate-800 transition-transform duration-300"></span>
+                    </button>
+                    <div id="content-5" class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                        <div class="pb-5 pr-5 text-sm text-slate-500">
+                            Our experienced Service & Repairs team is available to assess any issues that may arise
+                            with
+                            our products and, if
+                            feasible, offer repairs. Whenever possible, our priority is to re-use, repair, or
+                            recycle
+                            products to extend their life.
+                            We are committed to helping our customers continue their adventures by ensuring our
+                            products
+                            remain in use for many
+                            years to come.
+                        </div>
+                    </div>
                 </div>
             </div>
+            <div class="menu-image-holder md:w-1/2 w-full md:h-auto h-[300px]">
+            </div>
+        </div>
 
     </section>
 
@@ -512,7 +515,7 @@
     <section id="bw-sustainability" class="md:px-5 sm:px-10 px-8 bg-bw-green w-svw mt-[90px]">
         <div class="heading container flex md:flex-row flex-col justify-between gap-20">
             <article class="md:w-8/12 w-full flex flex-col gap-4">
-                <h2 class="font-sans font-medium text-white">Conscious Choices</h2>
+                <h2 class="font-sans font-medium text-white md:text-4xl text-3xl">Conscious Choices</h2>
                 <p class="text-white">The environment is a key concern for our brands, our staff, and our community. We
                     recognise our
                     responsibility to manage
@@ -536,9 +539,11 @@
         </div>
     </section>
 
+
+
     <footer class="bg-bw-grey">
         <div
-            class="md:container flex md:flex-row flex-col justify-between pt-[60px] md:pb-[180px] pb-[60px] px-8 md:gap-0 gap-4">
+            class="md:container flex md:flex-row flex-col justify-between pt-[60px] md:pb-[180px] pb-[100px] px-8 md:gap-0 gap-4">
             <div class="md:w-3/12 w-full">
                 <p class="font-medium font-sans">Contact Us</p>
                 <p>+64 9 306 7200<br>info@britwyn.co.nz</p><br>

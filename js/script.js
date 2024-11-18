@@ -27,17 +27,25 @@ function overflowYScrollAuto() {
 }
 
 
-// Get all the menu list links
-var menuItems = document.querySelectorAll('.accordion-list .accordion-item');
+document.addEventListener('DOMContentLoaded', function() {
+    var accordionItems = document.querySelectorAll('#our-expertise div .accordion-list .accordion-item');
 
-// Add a mouseover event listener to each link
-menuItems.forEach(function(item) {
-    item.addEventListener('mouseover', function() {
-        // Get the value of the data-src attribute
-        var value = this.getAttribute('data-src');
-        
-        // Change the background-image of .menu-image-holder
-        var menuImageHolder = document.querySelector('.menu-image-holder');
-        menuImageHolder.style.backgroundImage = 'url(' + value + ')';
+    accordionItems.forEach(function(item) {
+        item.addEventListener('mouseover', function() {
+            var value = this.getAttribute('data-src');
+            var menuImageHolder = document.querySelector('.menu-image-holder');
+
+            // Check if the menuImageHolder exists
+            if (menuImageHolder) {
+                menuImageHolder.style.backgroundImage = 'url(' + value + ')';
+                menuImageHolder.style.backgroundRepeat = 'no-repeat';
+                menuImageHolder.style.backgroundSize = 'cover';
+            }
+        });
+      
     });
 });
+
+    document.addEventListener('DOMContentLoaded', function() {
+        AOS.init();
+    });
