@@ -714,8 +714,16 @@ html {
   position: relative;
 }
 
+.bottom-0 {
+  bottom: 0px;
+}
+
 .left-0 {
   left: 0px;
+}
+
+.right-3 {
+  right: 0.75rem;
 }
 
 .top-0 {
@@ -728,6 +736,10 @@ html {
 
 .z-20 {
   z-index: 20;
+}
+
+.z-50 {
+  z-index: 50;
 }
 
 .z-\[8\] {
@@ -857,6 +869,10 @@ html {
   width: 140px;
 }
 
+.w-\[150px\] {
+  width: 150px;
+}
+
 .w-\[25px\] {
   width: 25px;
 }
@@ -892,6 +908,11 @@ html {
 
 .translate-y-0 {
   --tw-translate-y: 0px;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.rotate-0 {
+  --tw-rotate: 0deg;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
@@ -953,6 +974,14 @@ html {
 
 .rounded-lg {
   border-radius: 0.5rem;
+}
+
+.rounded-tl-xl {
+  border-top-left-radius: 0.75rem;
+}
+
+.rounded-tr-xl {
+  border-top-right-radius: 0.75rem;
 }
 
 .border-2 {
@@ -1142,6 +1171,11 @@ html {
   font-family: Untitled, Helvetica, Arial, sans-serif;
 }
 
+.text-2xl {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
 .text-3xl {
   font-size: 1.875rem;
   line-height: 2.25rem;
@@ -1263,11 +1297,15 @@ footer {
 }
 
 #intro-blurb,
-#our-brands,
 #our-expertise,
 #our-channels,
 #bw-sustainability {
   padding-top: 90px;
+  padding-bottom: 90px;
+}
+
+#our-brands {
+  padding-top: 50px;
   padding-bottom: 90px;
 }
 
@@ -1348,6 +1386,25 @@ h5 {
   transform: translateX(-50%);
 }
 
+[x-cloak] {
+  display: none !important;
+}
+
+/* Initial state of the button */
+
+.contact-button {
+  transition: transform 0.7s ease-in-out, right 0.7s ease-out;
+}
+
+/* When the button hits the footer, it slides out */
+
+/* When the button hits the footer, it slides out */
+
+.slide-out {
+  transform: translateX(200px) rotate(270deg);
+  /* Adjust to make the button move out more */
+}
+
 @media (max-width: 319px) {
   h1 {
     font-size: 1rem;
@@ -1402,6 +1459,11 @@ h5 {
 
   footer {
     background-size: contain;
+  }
+
+  .slide-out {
+    transform: translateY(200px) rotate(0deg);
+    /* Adjust to make the button move out more */
   }
 }
 
@@ -1611,6 +1673,14 @@ h5 {
 }
 
 @media (min-width: 768px) {
+  .md\:bottom-1\/2 {
+    bottom: 50%;
+  }
+
+  .md\:right-\[-55px\] {
+    right: -55px;
+  }
+
   .md\:block {
     display: block;
   }
@@ -1649,6 +1719,11 @@ h5 {
 
   .md\:w-auto {
     width: auto;
+  }
+
+  .md\:rotate-\[270deg\] {
+    --tw-rotate: 270deg;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
   }
 
   .md\:flex-row {
@@ -1700,6 +1775,11 @@ h5 {
 
   .md\:text-right {
     text-align: right;
+  }
+
+  .md\:text-3xl {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
   }
 
   .md\:text-4xl {

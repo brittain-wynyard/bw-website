@@ -49,3 +49,24 @@ document.addEventListener('DOMContentLoaded', function() {
     document.addEventListener('DOMContentLoaded', function() {
         AOS.init();
     });
+
+
+ // Detect the scroll position
+window.addEventListener('scroll', function() {
+    let button = document.querySelector('.contact-button');
+    let footer = document.getElementById('bw-footer');
+
+    // Get the position of the footer relative to the viewport
+    let footerTop = footer.getBoundingClientRect().top;
+
+    console.log('footerTop')
+
+    // If the footer is within 50px of the bottom of the viewport, trigger the slide-out
+    if (footerTop <= window.innerHeight + 50) {
+        button.classList.add('slide-out');
+    } else {
+        button.classList.remove('slide-out');
+    }
+}); 
+
+
