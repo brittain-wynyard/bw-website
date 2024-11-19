@@ -52,7 +52,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
  // Detect the scroll position
-window.addEventListener('scroll', function() {
+window.addEventListener('scroll', function() { 
     let button = document.querySelector('.contact-button');
     let footer = document.getElementById('bw-footer');
 
