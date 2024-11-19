@@ -107,7 +107,7 @@
 }
 
 /*
-! tailwindcss v3.4.14 | MIT License | https://tailwindcss.com
+! tailwindcss v3.4.15 | MIT License | https://tailwindcss.com
 */
 
 /*
@@ -825,10 +825,6 @@ html {
   height: 25px;
 }
 
-.h-\[300px\] {
-  height: 300px;
-}
-
 .h-\[3rem\] {
   height: 3rem;
 }
@@ -1006,22 +1002,22 @@ html {
 
 .border-bw-green {
   --tw-border-opacity: 1;
-  border-color: rgb(0 73 38 / var(--tw-border-opacity));
+  border-color: rgb(0 73 38 / var(--tw-border-opacity, 1));
 }
 
 .bg-bw-green {
   --tw-bg-opacity: 1;
-  background-color: rgb(0 73 38 / var(--tw-bg-opacity));
+  background-color: rgb(0 73 38 / var(--tw-bg-opacity, 1));
 }
 
 .bg-bw-grey {
   --tw-bg-opacity: 1;
-  background-color: rgb(204 204 204 / var(--tw-bg-opacity));
+  background-color: rgb(204 204 204 / var(--tw-bg-opacity, 1));
 }
 
 .bg-bw-white {
   --tw-bg-opacity: 1;
-  background-color: rgb(250 245 240 / var(--tw-bg-opacity));
+  background-color: rgb(250 245 240 / var(--tw-bg-opacity, 1));
 }
 
 .bg-transparent {
@@ -1216,34 +1212,29 @@ html {
   text-transform: uppercase;
 }
 
+.text-bw-black {
+  --tw-text-opacity: 1;
+  color: rgb(35 35 35 / var(--tw-text-opacity, 1));
+}
+
 .text-bw-green {
   --tw-text-opacity: 1;
-  color: rgb(0 73 38 / var(--tw-text-opacity));
+  color: rgb(0 73 38 / var(--tw-text-opacity, 1));
 }
 
 .text-bw-grey {
   --tw-text-opacity: 1;
-  color: rgb(204 204 204 / var(--tw-text-opacity));
+  color: rgb(204 204 204 / var(--tw-text-opacity, 1));
 }
 
 .text-bw-white {
   --tw-text-opacity: 1;
-  color: rgb(250 245 240 / var(--tw-text-opacity));
-}
-
-.text-slate-500 {
-  --tw-text-opacity: 1;
-  color: rgb(100 116 139 / var(--tw-text-opacity));
-}
-
-.text-slate-800 {
-  --tw-text-opacity: 1;
-  color: rgb(30 41 59 / var(--tw-text-opacity));
+  color: rgb(250 245 240 / var(--tw-text-opacity, 1));
 }
 
 .text-white {
   --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
+  color: rgb(255 255 255 / var(--tw-text-opacity, 1));
 }
 
 .transition {
@@ -1499,6 +1490,8 @@ h5 {
 
   svg #wheel {
     animation: scroll ease 1.5s infinite;
+    -webkit-animation: scroll ease 1.5s infinite;
+    -moz-animation: scroll ease 1.5s infinite;
   }
 
   nav li a:hover {
@@ -1615,17 +1608,17 @@ h5 {
 
 .hover\:border-bw-white:hover {
   --tw-border-opacity: 1;
-  border-color: rgb(250 245 240 / var(--tw-border-opacity));
+  border-color: rgb(250 245 240 / var(--tw-border-opacity, 1));
 }
 
 .hover\:bg-bw-green:hover {
   --tw-bg-opacity: 1;
-  background-color: rgb(0 73 38 / var(--tw-bg-opacity));
+  background-color: rgb(0 73 38 / var(--tw-bg-opacity, 1));
 }
 
 .hover\:text-white:hover {
   --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
+  color: rgb(255 255 255 / var(--tw-text-opacity, 1));
 }
 
 .hover\:opacity-0:hover {
@@ -1691,10 +1684,6 @@ h5 {
 
   .md\:h-10 {
     height: 2.5rem;
-  }
-
-  .md\:h-auto {
-    height: auto;
   }
 
   .md\:w-1\/2 {

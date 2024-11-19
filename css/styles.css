@@ -299,6 +299,8 @@ h5 {
 
     svg #wheel {
         animation: scroll ease 1.5s infinite;
+        -webkit-animation: scroll ease 1.5s infinite;
+        -moz-animation: scroll ease 1.5s infinite;
     }
 
     nav li a:hover {
