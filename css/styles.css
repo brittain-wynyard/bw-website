@@ -95,13 +95,17 @@ footer {
 #our-expertise,
 #our-channels,
 #bw-sustainability {
-    padding-top: 90px;
-    padding-bottom: 90px;
+    padding-top: 80px;
+    padding-bottom: 80px;
 }
 
 #our-brands {
-    padding-top: 50px;
-    padding-bottom: 90px;
+    padding-top: 60px;
+    padding-bottom: 80px;
+}
+
+.image-gallery {
+    padding-bottom: 40px;
 }
 
 #bw-sustainability {
@@ -144,6 +148,17 @@ h5 {
     background-size: cover;
     background-repeat: no-repeat;
 }
+
+.brand-gallery {
+  height: 250px; 
+}
+
+swiper-slide {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
 
 .swiper-custom-arrow {
     position: absolute;

@@ -44,10 +44,6 @@
                             <a href="#" class="block w-[140px] py-2 px-3 text-white md:p-0 lg:text-sm text-xs"
                                 aria-current="page">Nuorder</a>
                         </li>
-                        <li>
-                            <a href="#" class="block w-[140px] py-2 px-3 text-white md:p-0 lg:text-sm text-xs"
-                                aria-current="page">Contact</a>
-                        </li>
                     </ul>
                 </div>
                 <div x-cloak x-show="mobileMenuIsOpen"
@@ -85,7 +81,7 @@
                         </li>
                         <li
                             class="text-[20px] py-[25px] uppercase border-b-2 border-t-2 border-bw-green font-medium text-bw-green px-[45px]">
-                            <a href="#" class="flex flex-row justify-between items-center" aria-current="page">Contact
+                            <a href="#" class="flex flex-row justify-between items-center" aria-current="page">NuOrder
                                 <span><svg width="39" height="15" viewBox="0 0 39 15" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <path d="M1 7.9583L37.25 7.9583" stroke="#00362B" stroke-width="2"
@@ -114,7 +110,8 @@
                 </div>
 
                 <div class="animated-scroll-icon">
-                    <img src="images\Animation - 1732048241574.gif" alt="animated mouse scroll">
+                    <img class="md:h-[65px] h-[50px]" src="images\Mouse Scroll with Arrow.gif"
+                        alt="animated mouse scroll">
                 </div>
             </div>
             <div class="w-full max-h-[1080px] overflow-hidden">
@@ -146,7 +143,7 @@
             <h2 class="text-bw-grey md:text-3xl text-2xl" data-aos="fade-left" data-aos-duration="1000">Our Brands</h2>
         </div>
         <div class="block" data-aos="fade" data-aos-duration="1000">
-            <ul class="brand-list flex flex-wrap pt-[90px]">
+            <ul class="brand-list flex flex-wrap pt-[50px]">
                 <li class="relative w-3/12 bg-no-repeat bg-contain">
                     <a href="https://www.asics.com/nz/en-nz/" target="_blank">
                         <img src="/images/brands/asics-hover.svg" alt="Asics"
@@ -306,6 +303,56 @@
                 </li>
             </ul>
         </div>
+    </section>
+
+    <section class="image-gallery">
+        <swiper-container class="brand-gallery h-max" draggable="true" rewind="true" autoplay-delay="0" free-mode="true"
+            speed="10000" breakpoints='  
+      {
+          "576": {
+              "slidesPerView": 2    
+          },
+          "768": {
+            "slidesPerView": 3
+          },
+          "1280": {
+              "slidesPerView": 4
+          },
+          "1400": {
+              "slidesPerView": 5
+          }
+      }
+    '>
+            <swiper-slide style="background-image: url('images/gallery/Timberland2.jpg');">
+            </swiper-slide>
+            <swiper-slide style="background-image: url('images/gallery/IMG_9956.jpg');">
+            </swiper-slide>
+            <swiper-slide style="background-image: url('images/gallery/5D9A8762.jpg');">
+            </swiper-slide>
+            <swiper-slide style="background-image:
+            url('images/gallery/20240314-wilson-roger-federer-portrait-court-14618-2.jpg.high-res.jpeg');">
+            </swiper-slide>
+            <swiper-slide style="background-image: url('images/gallery/BS_Summer_24_4021.jpg');">
+            </swiper-slide>
+            <swiper-slide style="background-image: url('images/gallery/BW brand imagesClarks.jpg');">
+            </swiper-slide>
+            <swiper-slide style="background-image: url('images/gallery/BW brand imagesColeman.jpg');">
+            </swiper-slide>
+            <swiper-slide style="background-image: url('images/gallery/BW brand imagesSkratch.jpg');">
+            </swiper-slide>
+            <swiper-slide style="background-image: url('images/gallery/Daiwa_Coromandel_MattQuérée_5399.jpg');">
+            </swiper-slide>
+            <swiper-slide style="background-image: url('images/gallery/GM1.jpg');">
+            </swiper-slide>
+            <swiper-slide style="background-image: url('images/gallery/MGI_ZipX1X3X5_2024_15.jpg');">
+            </swiper-slide>
+            <swiper-slide style="background-image: url('images/gallery/Timberland2.jpg');">
+            </swiper-slide>
+            <swiper-slide style="background-image: url('images/gallery/Smartwool1.jpg');">
+            </swiper-slide>
+
+        </swiper-container>
+
     </section>
 
     <section id="our-expertise">
@@ -478,8 +525,6 @@
             </div>
         </div>
     </section>
-
-
 
     <footer id="bw-footer" class="bg-bw-grey relative z-50">
         <div

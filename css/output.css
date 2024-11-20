@@ -829,6 +829,10 @@ html {
   height: 3rem;
 }
 
+.h-\[50px\] {
+  height: 50px;
+}
+
 .h-\[90px\] {
   height: 90px;
 }
@@ -839,6 +843,11 @@ html {
 
 .h-full {
   height: 100%;
+}
+
+.h-max {
+  height: -moz-max-content;
+  height: max-content;
 }
 
 .max-h-0 {
@@ -867,10 +876,6 @@ html {
 
 .w-\[150px\] {
   width: 150px;
-}
-
-.w-\[25px\] {
-  width: 25px;
 }
 
 .w-auto {
@@ -1143,6 +1148,10 @@ html {
   padding-top: 40px;
 }
 
+.pt-\[50px\] {
+  padding-top: 50px;
+}
+
 .pt-\[60px\] {
   padding-top: 60px;
 }
@@ -1291,13 +1300,17 @@ footer {
 #our-expertise,
 #our-channels,
 #bw-sustainability {
-  padding-top: 90px;
-  padding-bottom: 90px;
+  padding-top: 80px;
+  padding-bottom: 80px;
 }
 
 #our-brands {
-  padding-top: 50px;
-  padding-bottom: 90px;
+  padding-top: 60px;
+  padding-bottom: 80px;
+}
+
+.image-gallery {
+  padding-bottom: 40px;
 }
 
 #bw-sustainability {
@@ -1338,6 +1351,16 @@ h5 {
   background-image: url(../images/JPEG_HIGH_0054.jpg);
   background-size: cover;
   background-repeat: no-repeat;
+}
+
+.brand-gallery {
+  height: 250px;
+}
+
+swiper-slide {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .swiper-custom-arrow {
@@ -1641,10 +1664,6 @@ h5 {
     margin-right: 0px;
   }
 
-  .sm\:w-\[35px\] {
-    width: 35px;
-  }
-
   .sm\:gap-8 {
     gap: 2rem;
   }
@@ -1686,6 +1705,10 @@ h5 {
     height: 2.5rem;
   }
 
+  .md\:h-\[65px\] {
+    height: 65px;
+  }
+
   .md\:w-1\/2 {
     width: 50%;
   }
@@ -1700,10 +1723,6 @@ h5 {
 
   .md\:w-8\/12 {
     width: 66.666667%;
-  }
-
-  .md\:w-\[20px\] {
-    width: 20px;
   }
 
   .md\:w-auto {
@@ -1787,10 +1806,6 @@ h5 {
     width: 66.666667%;
   }
 
-  .lg\:w-\[30px\] {
-    width: 30px;
-  }
-
   .lg\:py-\[15px\] {
     padding-top: 15px;
     padding-bottom: 15px;
@@ -1828,10 +1843,6 @@ h5 {
 
   .\32xl\:w-8\/12 {
     width: 66.666667%;
-  }
-
-  .\32xl\:w-\[40px\] {
-    width: 40px;
   }
 
   .\32xl\:gap-3 {
