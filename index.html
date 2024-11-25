@@ -23,7 +23,7 @@
         </button>
         <div x-cloak x-show="modalIsOpen" x-transition.opacity.duration.200ms x-trap.inert.noscroll="modalIsOpen"
             @keydown.esc.window="modalIsOpen = false" @click.self="modalIsOpen = false"
-            class="fixed inset-0 z-30 flex items-center justify-center bg-black/20 p-4 pb-8 backdrop-blur-md sm:items-center lg:p-8 overflow-y-auto"
+            class="fixed inset-0 z-30 flex items-center justify-center bg-black/20 px-4 py-8 backdrop-blur-md sm:items-center lg:p-8 overflow-y-auto"
             role="dialog" aria-modal="true" aria-labelledby="defaultModalTitle">
             <!-- Modal Dialog -->
             <div x-show="modalIsOpen"
@@ -42,7 +42,7 @@
                     </button>
                 </div>
                 <!-- Dialog Body -->
-                <div class="px-12 py-4">
+                <div class="px-10 py-4">
 
                     <form class="max-w-3xl mx-auto flex justify-between flex-wrap gap-y-6" method="POST"
                         action="https://formspree.io/f/mzzbgazd">
@@ -89,8 +89,7 @@
                                 Company</label>
                         </div>
                         <div class="w-full">
-                            <label for="countries" class="block my-2 text-sm font-medium text-bw-green">Select your
-                                country</label>
+                            <label for="countries" class="block my-2 text-sm font-medium text-bw-green">Subject</label>
                             <select id="countries" name="Subject"
                                 class="p-2.5 w-full text-sm text-gray-900 bg-gray-50 border-b-2 border-gray-300 focus:ring-bw-green focus:border-bw-green bg-transparent dark:focus:ring-bw-green dark:focus:border-bw-green">
 
@@ -110,7 +109,7 @@
                         </div>
                         <!-- Dialog Footer -->
                         <div
-                            class="flex flex-col-reverse justify-between gap-2 bg-white px-12 py-8 sm:flex-row sm:items-center md:justify-end">
+                            class="flex flex-col-reverse justify-between gap-2 bg-white py-8 sm:flex-row sm:items-center md:justify-end">
                             <button @click="modalIsOpen = false" type="submit"
                                 class="cursor-pointer whitespace-nowrap rounded-[250px] bg-bw-green px-10 py-2 text-center text-sm font-medium tracking-wide text-slate-100 transition hover:opacity-75 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-bw-green active:opacity-100 active:outline-offset-0">Send</button>
                         </div>
@@ -142,11 +141,13 @@
                 <div class="hidden w-full md:block md:w-auto">
                     <ul class="flex flex-row gap-[20px] p-4 md:p-0 font-sans font-bold uppercase text-center">
                         <li>
-                            <a href="#" class="block w-[140px] py-2 px-3 uppercase text-white md:p-0 lg:text-sm text-xs"
+                            <a href="https://portal.brittainwynyard.co.nz/session/login"
+                                class="block w-[140px] py-2 px-3 uppercase text-white md:p-0 lg:text-sm text-xs"
                                 aria-current="page">Cs Portal</a>
                         </li>
                         <li>
-                            <a href="#" class="block w-[140px] py-2 px-3 text-white md:p-0 lg:text-sm text-xs"
+                            <a href="https://www.nuorder.com/"
+                                class="block w-[140px] py-2 px-3 text-white md:p-0 lg:text-sm text-xs"
                                 aria-current="page">Nuorder</a>
                         </li>
                     </ul>
@@ -175,7 +176,8 @@
                     <ul class="flex flex-col pt-[65px]">
                         <li
                             class="text-[20px] py-[25px] uppercase border-t-2 border-bw-green font-medium text-bw-green px-[45px]">
-                            <a href="#" class="flex flex-row justify-between items-center" aria-current="page">Cs
+                            <a href="https://portal.brittainwynyard.co.nz/session/login"
+                                class="flex flex-row justify-between items-center" aria-current="page">Cs
                                 Portal<span><svg width="39" height="15" viewBox="0 0 39 15" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <path d="M1 7.9583L37.25 7.9583" stroke="#00362B" stroke-width="2"
@@ -186,7 +188,8 @@
                         </li>
                         <li
                             class="text-[20px] py-[25px] uppercase border-b-2 border-t-2 border-bw-green font-medium text-bw-green px-[45px]">
-                            <a href="#" class="flex flex-row justify-between items-center" aria-current="page">NuOrder
+                            <a href="https://www.nuorder.com/" class="flex flex-row justify-between items-center"
+                                aria-current="page">NuOrder
                                 <span><svg width="39" height="15" viewBox="0 0 39 15" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <path d="M1 7.9583L37.25 7.9583" stroke="#00362B" stroke-width="2"
@@ -636,9 +639,9 @@
             </div>
             <div class="md:w-3/12 w-full md:text-right text-left flex flex-col justify-between">
                 <ul>
-                    <li>Careers</li>
-                    <li>Code of Ethics</li>
-                    <li>Privacy Policy</li>
+                    <li><a href="Brittain Wynyard Code of Ethics.2024.pdf" target="_blank">Code of Ethics</a></li>
+                    <li><a href="images\Brittain Wynyard Privacy Policy.2024.pdf" target="_blank">Privacy Policy</a>
+                    </li>
                 </ul>
                 <p class="md:pt-0 pt-[25px]">Copyright © 2024 Brittain Wynyard.<br>All rights reserved.</p>
             </div>

@@ -1248,6 +1248,11 @@ html {
   padding-bottom: 35px;
 }
 
+.px-4 {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
 .pb-5 {
   padding-bottom: 1.25rem;
 }
