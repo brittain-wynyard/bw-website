@@ -1091,6 +1091,10 @@ html {
   border-radius: 0.75rem;
 }
 
+.rounded-none {
+  border-radius: 0px;
+}
+
 .rounded-tl-xl {
   border-top-left-radius: 0.75rem;
 }
