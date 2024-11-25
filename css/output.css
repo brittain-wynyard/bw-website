@@ -854,8 +854,8 @@ html {
   height: 150px;
 }
 
-.h-\[25px\] {
-  height: 25px;
+.h-\[35px\] {
+  height: 35px;
 }
 
 .h-\[3rem\] {
@@ -881,14 +881,6 @@ html {
 .h-max {
   height: -moz-max-content;
   height: max-content;
-}
-
-.h-\[40px\] {
-  height: 40px;
-}
-
-.h-\[35px\] {
-  height: 35px;
 }
 
 .max-h-0 {
