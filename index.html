@@ -46,20 +46,7 @@
 
                     <form class="max-w-3xl mx-auto flex justify-between flex-wrap gap-y-6" method="POST"
                         action="https://formspree.io/f/mzzbgazd">
-                        <div class="w-full">
-                            <label for="countries"
-                                class="block my-2 text-sm font-medium text-gray-900 dark:text-white">Select your
-                                country</label>
-                            <select id="countries" name="Subject"
-                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
 
-                                <option>Accounts</option>
-                                <option>Wholesale</option>
-                                <option>Retail</option>
-                                <option>Repairs & Service</option>
-                                <option>Others</option>
-                            </select>
-                        </div>
                         <div class="relative z-0 w-[45%] mb-5 group">
                             <input type="text" name="First Name" id="floating_firstName"
                                 class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none   dark:focus:border-bw-green focus:outline-none focus:ring-0 focus:border-bw-green peer"
@@ -102,6 +89,19 @@
                                 Company</label>
                         </div>
                         <div class="w-full">
+                            <label for="countries" class="block my-2 text-sm font-medium text-bw-green">Select your
+                                country</label>
+                            <select id="countries" name="Subject"
+                                class="p-2.5 w-full text-sm text-gray-900 bg-gray-50 border-b-2 border-gray-300 focus:ring-bw-green focus:border-bw-green bg-transparent dark:focus:ring-bw-green dark:focus:border-bw-green">
+
+                                <option>Accounts</option>
+                                <option>Wholesale</option>
+                                <option>Retail</option>
+                                <option>Repairs & Service</option>
+                                <option>Others</option>
+                            </select>
+                        </div>
+                        <div class="w-full">
                             <label for="message" class="block mb-2 text-sm font-medium text-bw-green">Your
                                 message</label>
                             <textarea name="Message" id="Message" rows="4"
@@ -127,7 +127,7 @@
             <div
                 class="flex flex-wrap items-center justify-between mx-auto md:px-5 sm:px-10 px-[45px] xl:py-[45px] lg:py-[15px] sm:py-[15px] py-[35px] absolute z-10 container gap-8">
                 <img x-cloak x-show="!mobileMenuIsOpen" src="images\brands\BW-logo.svg"
-                    class="2xl:h-12 md:h-10 h-[25px]" alt="BW Logo" />
+                    class="2xl:h-12 md:h-10 h-[35px]" alt="BW Logo" />
 
                 <button @click="mobileMenuIsOpen = !mobileMenuIsOpen" :aria-expanded="mobileMenuIsOpen" type="button"
                     class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-bw-white rounded-lg md:hidden z-20"
@@ -222,12 +222,12 @@
             <div class="w-full max-h-[1080px] overflow-hidden">
                 <video autoplay playsinline loop muted class="md:block hidden w-full"
                     poster="images/BW-Homepage-Intro-Desktop-(0-00-00-00)_1.jpg">
-                    <source src="images\BW Homepage Desktop.mp4" type="video/mp4" />
+                    <source src="images/BW Homepage Intro Desktop-min.mp4" type="video/mp4" />
                     Your Browser does not support the video tag
                 </video>
                 <video autoplay playsinline loop muted class="relative w-auto min-w-full h-auto md:hidden block"
                     poster="images/BW-Homepage-Intro-Mobile.jpg">
-                    <source src="images/BW Homepage Mobile.mp4" type="video/mp4" />
+                    <source src="images/BW Homepage Intro Mobile-min.mp4" type="video/mp4" />
                     Your Browser does not support the video tag
                 </video>
             </div>
@@ -411,7 +411,7 @@
     </section>
 
     <section class="image-gallery">
-        <swiper-container class="brand-gallery h-max" draggable="true" rewind="true" autoplay-delay="0" free-mode="true"
+        <swiper-container class="brand-gallery h-max" draggable="true" rewind="true" autoplay-delay="1" free-mode="true"
             speed="10000" breakpoints='  
       {
           "576": {
@@ -428,32 +428,24 @@
           }
       }
     '>
-            <swiper-slide style="background-image: url('images/gallery/Timberland2.jpg');">
-            </swiper-slide>
-            <swiper-slide style="background-image: url('images/gallery/IMG_9956.jpg');">
-            </swiper-slide>
-            <swiper-slide style="background-image: url('images/gallery/5D9A8762.jpg');">
+            <swiper-slide style="background-image: url('images/gallery/5D9A8762-min.webp');">
             </swiper-slide>
             <swiper-slide style="background-image:
-            url('images/gallery/20240314-wilson-roger-federer-portrait-court-14618-2.jpg.high-res.jpeg');">
+            url('images/gallery/20240314-wilson-roger-federer-portrait-court-14618-2.jpg.high-res-min.webp');">
             </swiper-slide>
-            <swiper-slide style="background-image: url('images/gallery/BS_Summer_24_4021.jpg');">
+            <swiper-slide style="background-image: url('images/gallery/BS_Summer_24_4021-min.webp');">
             </swiper-slide>
-            <swiper-slide style="background-image: url('images/gallery/BW brand imagesClarks.jpg');">
+            <swiper-slide style="background-image: url('images/gallery/BW brand imagesColeman-min.webp');">
             </swiper-slide>
-            <swiper-slide style="background-image: url('images/gallery/BW brand imagesColeman.jpg');">
+            <swiper-slide style="background-image: url('images/gallery/BW brand imagesSkratch-min.jpg');">
             </swiper-slide>
-            <swiper-slide style="background-image: url('images/gallery/BW brand imagesSkratch.jpg');">
+            <swiper-slide style="background-image: url('images/gallery/BW brand imagesDaiwa-min.webp');">
             </swiper-slide>
-            <swiper-slide style="background-image: url('images/gallery/Daiwa_Coromandel_MattQuérée_5399.jpg');">
+            <swiper-slide style="background-image: url('images/gallery/BW brand imagesGM-min.webp');">
             </swiper-slide>
-            <swiper-slide style="background-image: url('images/gallery/GM1.jpg');">
+            <swiper-slide style="background-image: url('images/gallery/BW brand imagesTimberland-min.webp');">
             </swiper-slide>
-            <swiper-slide style="background-image: url('images/gallery/MGI_ZipX1X3X5_2024_15.jpg');">
-            </swiper-slide>
-            <swiper-slide style="background-image: url('images/gallery/Timberland2.jpg');">
-            </swiper-slide>
-            <swiper-slide style="background-image: url('images/gallery/Smartwool1.jpg');">
+            <swiper-slide style="background-image: url('images/gallery/Smartwool1-min.webp');">
             </swiper-slide>
 
         </swiper-container>
@@ -482,7 +474,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="accordion-item border-b-2 border-bw-green pt-[10px] pb-[10px]">
+                <div class="accordion-item border-b-2 border-bw-green pt-[10px] pb-[10px]"
+                    data-src="images/IMG_5889.webp">
                     <button class="accordion-header w-full flex justify-between items-center py-8 text-bw-black"
                         onclick="toggleAccordion(2)">
                         <span class="text-xl font-sans font-medium uppercase">Marketing</span>
@@ -531,7 +524,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="accordion-item border-b-2 border-bw-green pt-[10px] pb-[10px]">
+                <div class="accordion-item border-b-2 border-bw-green pt-[10px] pb-[10px]"
+                    data-src="images/gallery/MGI2.webp">
                     <button class="accordion-header w-full flex justify-between items-center py-8 text-bw-black"
                         onclick="toggleAccordion(5)">
                         <span class="text-xl font-sans font-medium uppercase">Service & Repairs</span>
