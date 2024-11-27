@@ -1412,6 +1412,22 @@ html {
   padding-right: 2rem;
 }
 
+.pr-0 {
+  padding-right: 0px;
+}
+
+.pr-10 {
+  padding-right: 2.5rem;
+}
+
+.pr-\[40px\] {
+  padding-right: 40px;
+}
+
+.pr-20 {
+  padding-right: 5rem;
+}
+
 .text-left {
   text-align: left;
 }
@@ -2163,6 +2179,10 @@ select {
     height: auto;
   }
 
+  .md\:h-\[90px\] {
+    height: 90px;
+  }
+
   .md\:w-1\/2 {
     width: 50%;
   }
@@ -2258,6 +2278,10 @@ select {
     padding-top: 0px;
   }
 
+  .md\:pr-8 {
+    padding-right: 2rem;
+  }
+
   .md\:text-left {
     text-align: left;
   }
@@ -2302,6 +2326,10 @@ select {
 
   .lg\:pl-\[130px\] {
     padding-left: 130px;
+  }
+
+  .lg\:pr-0 {
+    padding-right: 0px;
   }
 
   .lg\:text-sm {
