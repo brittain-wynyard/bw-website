@@ -909,12 +909,32 @@ html {
   height: 100svh;
 }
 
+.h-\[20px\] {
+  height: 20px;
+}
+
+.h-\[25px\] {
+  height: 25px;
+}
+
+.h-\[30px\] {
+  height: 30px;
+}
+
 .max-h-0 {
   max-height: 0px;
 }
 
 .max-h-\[1080px\] {
   max-height: 1080px;
+}
+
+.min-h-\[250px\] {
+  min-height: 250px;
+}
+
+.min-h-\[400px\] {
+  min-height: 400px;
 }
 
 .w-10 {
@@ -2106,6 +2126,18 @@ select {
     margin-right: 0px;
   }
 
+  .sm\:h-\[35px\] {
+    height: 35px;
+  }
+
+  .sm\:h-5 {
+    height: 1.25rem;
+  }
+
+  .sm\:h-10 {
+    height: 2.5rem;
+  }
+
   .sm\:flex-row {
     flex-direction: row;
   }
@@ -2307,8 +2339,20 @@ select {
 }
 
 @media (min-width: 1024px) {
+  .lg\:block {
+    display: block;
+  }
+
   .lg\:w-8\/12 {
     width: 66.666667%;
+  }
+
+  .lg\:w-1\/2 {
+    width: 50%;
+  }
+
+  .lg\:flex-row {
+    flex-direction: row;
   }
 
   .lg\:p-8 {

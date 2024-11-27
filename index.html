@@ -214,7 +214,7 @@
             <div
                 class="flex flex-wrap items-center justify-between mx-auto md:px-5 sm:px-10 px-[45px] xl:py-[45px] lg:py-[15px] sm:py-[15px] py-[35px] absolute z-[60] container gap-8">
                 <img x-cloak x-show="!mobileMenuIsOpen" src="images\brands\BW-logo.svg"
-                    class="2xl:h-12 md:h-10 h-[35px]" alt="BW Logo" />
+                    class="2xl:h-12 md:h-10 sm:h-10 h-[30px]" alt="BW Logo" />
 
                 <button @click="mobileMenuIsOpen = !mobileMenuIsOpen" :aria-expanded="mobileMenuIsOpen" type="button"
                     class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-bw-white rounded-lg md:hidden z-20"
@@ -318,14 +318,14 @@
                 </video>
                 <video autoplay playsinline loop muted class="relative w-auto min-w-full h-auto md:hidden block"
                     poster="images/BW-Homepage-Intro-Mobile.jpg">
-                    <source src="images/BW Homepage Intro_Brands_Mobile.mp4" type="video/mp4" />
+                    <source src="images/BW Homepage Intro Mobile_brand.mp4" type="video/mp4" />
                     Your Browser does not support the video tag
                 </video>
             </div>
         </div>
     </section>
 
-    <section id="intro-blurb" class="container md:px-10 px-5">
+    <section id="intro-blurb" class="container md:px-10 px-5 min-h-[250px]">
         <article class="ml-auto text-center">
             <h2 class="text-bw-green">Our team delivers a world-class wholesale, marketing, and DTC framework that
                 enables international
@@ -334,7 +334,7 @@
         </article>
     </section>
 
-    <section id="our-brands" class="container">
+    <section id="our-brands" class="container min-h-[400px]">
         <div class="heading border-l-2 border-bw-green border-solid lg:pl-6 pl-3 h-[90px]">
             <h2 class="text-bw-green md:text-3xl text-2xl" data-aos="fade-left" data-aos-duration="1000">Our Brands</h2>
         </div>
@@ -552,8 +552,8 @@
                 collective expertise has been built by a passionate and
                 focused team.</p>
         </div>
-        <div class="flex md:flex-row flex-col-reverse pt-[90px] max-w-[1920px] mx-auto">
-            <div class="accordion-list md:w-1/2 w-full">
+        <div class="flex lg:flex-row flex-col-reverse pt-[90px] max-w-[1920px] mx-auto">
+            <div class="accordion-list lg:w-1/2 w-full">
                 <div class="accordion-item border-b-2 border-t-2 border-bw-green pt-[10px] pb-[10px] pr-[20px]"
                     data-src="images/CommBay_StorePhotos_July23-6303.jpg">
                     <button class="accordion-header w-full flex justify-between items-center py-8 text-bw-black"
@@ -668,7 +668,7 @@
 
 
             </div>
-            <div class="menu-image-holder md:w-1/2 w-full h-auto md:block hidden">
+            <div class="menu-image-holder lg:w-1/2 w-full h-auto lg:block hidden">
             </div>
         </div>
 
