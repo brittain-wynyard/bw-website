@@ -17,14 +17,6 @@ function toggleAccordion(index) {
       content.style.maxHeight = content.scrollHeight + 'px';
     }
 }
-  
-function overflowYScrollHidden() {
-  document.body.style.overflowY = 'hidden';
-}
-
-function overflowYScrollAuto() {
-  document.body.style.overflowY = 'auto'; 
-}
 
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -39,7 +31,8 @@ document.addEventListener('DOMContentLoaded', function() {
             if (menuImageHolder) {
                 menuImageHolder.style.backgroundImage = 'url(' + value + ')';
                 menuImageHolder.style.backgroundRepeat = 'no-repeat';
-                menuImageHolder.style.backgroundSize = 'cover';
+              menuImageHolder.style.backgroundSize = 'cover';
+              menuImageHolder.style.backgroundPosition = 'center';
             }
         });
       
@@ -66,5 +59,28 @@ window.addEventListener('scroll', function() {
         button.classList.remove('slide-out');
     }
 }); 
+
+
+
+document.addEventListener("DOMContentLoaded", (event) => { var form = document.getElementById("bw-form"); async function handleSubmit(event) {
+event.preventDefault();
+  var status = document.getElementById("notification");
+   var modal = document.getElementById("form-modal");
+var data = new FormData(event.target);
+fetch(event.target.action, {
+  method: form.method,
+  body: data,
+  headers: { 
+    'Accept': 'application/json'
+}
+}).then(response => {
+  if (response.ok) {
+    form.reset()
+  }
+}).catch(error => {
+  status.innerHTML = "Oops! There was a problem submitting your form"
+});
+}
+form.addEventListener("submit", handleSubmit) });
 
 
