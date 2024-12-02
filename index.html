@@ -10,11 +10,10 @@
     <link href="css/output.css" rel="stylesheet">
     <link href="css/styles.css" rel="stylesheet">
     <link href="css/aos.css" rel="stylesheet">
-    <script src="js/script.js"></script>
+    <script defer src="js/script.js"></script>
     <!-- Alpine Plugins -->
-    <script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/focus@3.x.x/dist/cdn.min.js"></script>
+    <script defer src="js/alpine-core.js"></script>
     <script defer src="js/alpine.js"></script>
-    <script src="js/swiper-element-bundle.min.js"></script>
     <script defer src="js/aos.js"></script>
 
 
@@ -219,7 +218,7 @@
             class="bg-transparent flex justify-center">
             <div
                 class="flex flex-wrap items-center justify-between mx-auto md:px-5 sm:px-10 px-[45px] xl:py-[45px] lg:py-[15px] sm:py-[15px] py-[35px] absolute z-[60] container gap-8">
-                <img x-cloak x-show="!mobileMenuIsOpen" src="images\brands\BW-logo.svg"
+                <img x-cloak x-show="!mobileMenuIsOpen" src="images/brands\BW-logo.svg"
                     class="2xl:h-12 md:h-10 sm:h-10 h-[30px]" alt="BW Logo" />
 
                 <button @click="mobileMenuIsOpen = !mobileMenuIsOpen" :aria-expanded="mobileMenuIsOpen" type="button"
@@ -253,7 +252,7 @@
                     x-transition:leave="transition motion-reduce:transition-none ease-out duration-300"
                     x-transition:leave-start="translate-y-0" x-transition:leave-end="-translate-y-full">
                     <div class="flex flex-row justify-between px-[45px] pt-[35px]">
-                        <img x-cloak x-show="mobileMenuIsOpen" src="images\Brittain Wynyard BW Logo White.svg"
+                        <img x-cloak x-show="mobileMenuIsOpen" src="images/Brittain Wynyard BW Logo White.svg"
                             class="h-[3rem]" alt="BW Logo">
                         <button @click="mobileMenuIsOpen = !mobileMenuIsOpen; " :aria-expanded="mobileMenuIsOpen"
                             type="button"
@@ -312,7 +311,7 @@
                 </div>
 
                 <div class="animated-scroll-icon">
-                    <img class="md:h-[65px] h-[50px]" src="images\Mouse Scroll with Arrow.gif"
+                    <img class="md:h-[65px] h-[50px]" src="images/Mouse Scroll with Arrow.gif"
                         alt="animated mouse scroll">
                 </div>
             </div>
@@ -508,53 +507,44 @@
     </section>
 
     <section class="image-gallery">
-        <swiper-container class="brand-gallery h-max pointer-events-none" draggable="false" rewind="true"
-            autoplay-delay="1" free-mode="true" speed="5000" breakpoints='  
-      {
-          "576": {
-              "slidesPerView": 2    
-          },
-          "768": {
-            "slidesPerView": 3
-          },
-          "1280": {
-              "slidesPerView": 4
-          },
-          "1400": {
-              "slidesPerView": 5
-          }
-      }
-    '>
-            <swiper-slide style="background-image: url('images/gallery/5D9A8762-min.webp');">
-            </swiper-slide>
-            <swiper-slide style="background-image:
-            url('images/gallery/20240314-wilson-roger-federer-portrait-court-14618-2.jpg.high-res-min.webp');">
-            </swiper-slide>
-            <swiper-slide style="background-image: url('images/gallery/BS_Summer_24_4021-min.webp');">
-            </swiper-slide>
-            <swiper-slide style="background-image: url('images/gallery/BW brand imagesColeman-min.webp');">
-            </swiper-slide>
-            <swiper-slide style="background-image: url('images/gallery/BW brand imagesSkratch-min.jpg');">
-            </swiper-slide>
-            <swiper-slide style="background-image: url('images/gallery/BW brand imagesDaiwa-min.webp');">
-            </swiper-slide>
-            <swiper-slide style="background-image: url('images/gallery/BW brand imagesGM-min.webp');">
-            </swiper-slide>
-            <swiper-slide style="background-image: url('images/TImberland-Carousel-6-inch-boot.webp');">
-            </swiper-slide>
-            <swiper-slide style="background-image: url('images/gallery/Smartwool1-min.webp');">
-            </swiper-slide>
 
+        <div class="marquee">
+            <div class="track">
+                <div class="content flex">
+                    <img src="images/gallery/5D9A8762-min.webp" alt="">
+                    <img src="images/gallery/20240314-wilson-roger-federer-portrait-court-14618-2.jpg.high-res-min.webp"
+                        alt="">
+                    <img src="images/gallery/BS_Summer_24_4021-min.webp" alt="">
+                    <img src="images/gallery/BW brand imagesColeman-min.webp" alt="">
+                    <img src="images/gallery/BW brand imagesSkratch-min.jpg" alt="">
+                    <img src="images/gallery/BW brand imagesDaiwa-min.webp" alt="">
+                    <img src="images/gallery/BW brand imagesGM-min.webp" alt="">
+                    <img src="images/TImberland-Carousel-6-inch-boot.webp" alt="">
+                    <img src="images/gallery/Smartwool1-min.webp" alt="">
+                    <img src="images/gallery/5D9A8762-min.webp" alt="">
+                    <img src="images/gallery/20240314-wilson-roger-federer-portrait-court-14618-2.jpg.high-res-min.webp"
+                        alt="">
+                    <img src="images/gallery/BS_Summer_24_4021-min.webp" alt="">
+                    <img src="images/gallery/BW brand imagesColeman-min.webp" alt="">
+                    <img src="images/gallery/BW brand imagesSkratch-min.jpg" alt="">
+                    <img src="images/gallery/BW brand imagesDaiwa-min.webp" alt="">
+                    <img src="images/gallery/BW brand imagesGM-min.webp" alt="">
+                    <img src="images/TImberland-Carousel-6-inch-boot.webp" alt="">
+                    <img src="images/gallery/Smartwool1-min.webp" alt="">
 
-        </swiper-container>
+                </div>
+            </div>
+        </div>
 
     </section>
 
-    <section id="our-expertise">
+    <section id=" our-expertise">
         <div class="heading container border-l-2 border-bw-green border-solid lg:pl-6 pl-3 md:h-[90px] h-auto">
-            <h2 class="text-bw-green md:text-3xl text-2xl" data-aos="fade-left" data-aos-duration="1000">Our Expertise
+            <h2 class="text-bw-green md:text-3xl text-2xl" data-aos="fade-left" data-aos-duration="1000">Our
+                Expertise
             </h2>
-            <p class="pt-3 pr-20 text-bw-black" data-aos="fade-left" data-aos-duration="1000">Over 100 years our
+            <p class="pt-3 pr-20 text-bw-black" data-aos="fade-left" data-aos-duration="1000">Over 100 years
+                our
                 collective expertise has been built by a passionate and
                 focused team.</p>
         </div>
@@ -569,9 +559,11 @@
                     </button>
                     <div id="content-1" class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
                         <div class="pb-5 md:pr-8 pr-0 text-sm text-bw-black">
-                            We service 1000+ doors throughout NZ. We run a high-service wholesale sales model with
+                            We service 1000+ doors throughout NZ. We run a high-service wholesale sales
+                            model with
                             category specialist sales teams.
-                            We carefully segment distribution to allow long-term sales performance. Our focus is on
+                            We carefully segment distribution to allow long-term sales performance. Our
+                            focus is on
                             supporting technical retailers
                             with education and marketing programmes. 
                         </div>
@@ -587,16 +579,18 @@
                     </button>
                     <div id="content-2" class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
                         <div class="pb-5 md:pr-8 pr-0  text-sm text-bw-black">
-                            We have been executing flagship and outlet retail for our key brands for 20+ years. Today
+                            We have been executing flagship and outlet retail for our key brands for 20+
+                            years. Today
                             our retail business consists
-                            of 19 doors across 5 brands. Retail is a key pillar of a well-developed brand in NZ - our
+                            of 18 doors across 5 brands. Retail is a key pillar of a well-developed brand in
+                            NZ - our
                             team loves bringing brands to
                             life with customers.
                         </div>
                     </div>
                 </div>
                 <div class="accordion-item border-b-2 border-bw-green pt-[10px] pb-[10px]"
-                    data-src="images/gallery/Logistic_image.webp">
+                    data-src="images/Expertise-Logistics.webp">
                     <button class="accordion-header w-full flex justify-between items-center py-8 text-bw-black"
                         onclick="toggleAccordion(3)">
                         <span class="text-xl font-sans font-medium uppercase">Logistics</span>
@@ -604,9 +598,11 @@
                     </button>
                     <div id="content-3" class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
                         <div class="pb-5 md:pr-8 pr-0 text-sm text-bw-black">
-                            All brands are supported by our specialist logistics team. Our decades of experience and
+                            All brands are supported by our specialist logistics team. Our decades of
+                            experience and
                             relative scale, allows for the
-                            most efficient and reliable shipping outcomes for NZ. We offer best in class fulfillment
+                            most efficient and reliable shipping outcomes for NZ. We offer best in class
+                            fulfillment
                             times across NZ. Brands are
                             supported with both indent and ex-stock programmes.
                         </div>
@@ -621,15 +617,17 @@
                     </button>
                     <div id="content-4" class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
                         <div class="pb-5 md:pr-8 pr-0 text-sm text-bw-black">
-                            Ecommerce plays a central role in bringing a brand to life in NZ. Our specialist team of 20
+                            Ecommerce plays a central role in bringing a brand to life in NZ. Our specialist
+                            team of 20
                             oversees 7 brand ecommerce
-                            sites. The sites allow us to present the full range, connect with customers, and invest
+                            sites. The sites allow us to present the full range, connect with customers, and
+                            invest
                             heavily in brand marketing.
                         </div>
                     </div>
                 </div>
                 <div class="accordion-item border-b-2 border-bw-green pt-[10px] pb-[10px]"
-                    data-src="images/gallery/Timberland-marketing-image.webp">
+                    data-src="images/Expertise-Marketing.webp">
                     <button class="accordion-header w-full flex justify-between items-center py-8 text-bw-black"
                         onclick="toggleAccordion(5)">
                         <span class="text-xl font-sans font-medium uppercase">Marketing</span>
@@ -637,9 +635,11 @@
                     </button>
                     <div id="content-5" class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
                         <div class="pb-5 md:pr-8 pr-0 text-sm text-bw-black">
-                            Across digital campaigns, community engagement, sponsorships and traditional media, we
+                            Across digital campaigns, community engagement, sponsorships and traditional
+                            media, we
                             tailor our approach to reach the
-                            right audiences effectively. We ensure that every campaign is designed to maximise brand
+                            right audiences effectively. We ensure that every campaign is designed to
+                            maximise brand
                             exposure and drive engagement,
                             ultimately building brand loyalty and growth.
                         </div>
@@ -654,9 +654,11 @@
                     </button>
                     <div id="content-6" class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
                         <div class="pb-5 md:pr-8 pr-0 text-sm text-bw-black">
-                            Our experienced Repairs and Services team is available to assess any issues with our
+                            Our experienced Repairs and Services team is available to assess any issues with
+                            our
                             products. Whenever possible, our
-                            priority is to reuse, repair, or recycle products to extend their life. Standing behind the
+                            priority is to reuse, repair, or recycle products to extend their life. Standing
+                            behind the
                             products we sell is central
                             to our reputation. 
                         </div>
@@ -716,7 +718,7 @@
 
         </div>
     </section>
-    <section id="bw-sustainability" class="md:px-5 sm:px-10 px-8 bg-bw-green w-svw mt-[90px]">
+    <section id="bw-sustainability" class="md:px-5 sm:px-10 px-8 bg-bw-green w-svw">
         <div class="heading container flex md:flex-row flex-col justify-between gap-20">
             <article class="md:w-8/12 w-full flex flex-col gap-4">
                 <h2 class="font-sans font-medium text-white md:text-4xl text-3xl">Conscious Choices</h2>
@@ -740,7 +742,7 @@
 
             <div class="flex items-center justify-center w-3/12">
                 <a href="https://www.bcorporation.net/en-us/">
-                    <img src="images\B-Corp-Logo-White-RGB.svg" class="h-[150px]" alt="BW Logo" />
+                    <img src="images/B-Corp-Logo-White-RGB.svg" class="h-[150px]" alt="BW Logo" />
                 </a>
             </div>
         </div>
@@ -751,14 +753,17 @@
             class="md:container flex md:flex-row flex-col justify-between pt-[60px] md:pb-[180px] pb-[100px] px-8 md:gap-0 gap-4">
             <div class="md:w-3/12 w-full">
                 <p class="font-medium font-sans">Contact Us</p>
-                <p>+64 9 306 7200<br><a href="mailto:@info@britwyn.co.nz">info@britwyn.co.nz</a></p><br>
-                <p>24 Heather Street, Parnell, Auckland 1052, New Zealand</p><br>
-                <p>Unit 4/433 Saint Asaph Street, Phillipstown, Christchurch 8011</p>
+                <p><a href="+64 9 306 7200">+64 9 306 7200</a><br><a
+                        href="mailto:@info@britwyn.co.nz">info@britwyn.co.nz</a></p><br>
+                <p><a href="https://maps.app.goo.gl/qJU72NGv3398xHfy6" target="_blank">24 Heather Street, Parnell,
+                        Auckland 1052, New Zealand</a></p><br>
+                <p><a href="https://maps.app.goo.gl/1u3xSVxUUpg5rJKbA">Unit 4/433 Saint Asaph Street, Phillipstown,
+                        Christchurch 8011</a> </p>
             </div>
             <div class="md:w-3/12 w-full md:text-right text-left flex flex-col justify-between">
                 <ul>
                     <li><a href="Brittain Wynyard Code of Ethics.2024.pdf" target="_blank">Code of Ethics</a></li>
-                    <li><a href="images\Brittain Wynyard Privacy Policy.2024.pdf" target="_blank">Privacy Policy</a>
+                    <li><a href="images/Brittain Wynyard Privacy Policy.2024.pdf" target="_blank">Privacy Policy</a>
                     </li>
                 </ul>
                 <p class="md:pt-0 pt-[25px]">Copyright © 2024 Brittain Wynyard.<br>All rights reserved.</p>
