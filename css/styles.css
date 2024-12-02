@@ -1,7 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+ 
 
 @layer base {
     html {
@@ -351,6 +351,12 @@ select {
 
     .accordion-item {
         padding-left: 21%;
+    }
+}
+
+@media (min-width: 1600px) {
+    .accordion-item {
+        padding-left: 10%;
     }
 }
 

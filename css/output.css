@@ -1868,6 +1868,12 @@ select {
   }
 }
 
+@media (min-width: 1600px) {
+  .accordion-item {
+    padding-left: 10%;
+  }
+}
+
 @media (min-width: 1920px) {
   .animated-scroll-icon {
     margin-top: 10rem;
